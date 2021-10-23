@@ -1,0 +1,13 @@
+.container {
+  background-color: var(--app-light-bg);
+  min-height: 100vh;
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+  color: var(--app-dark-blue);
+}
