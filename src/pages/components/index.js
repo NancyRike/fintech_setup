@@ -24,6 +24,10 @@ const Components = () => {
               <h6 className="fw-bold">Checkbox with bold font label</h6>
               <Checkbox label={<p className="fw-bold">Click me</p>} />
             </div>
+            <div className="my-3">
+              <h6 className="fw-bold">Checkbox disabled</h6>
+              <Checkbox label={<p>Click me</p>} disabled />
+            </div>
           </div>
         </div>
         {/* Radio Button*/}

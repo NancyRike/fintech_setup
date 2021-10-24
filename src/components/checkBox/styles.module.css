@@ -38,6 +38,11 @@
   background-color: var(--app-dark-blue);
 }
 
+.container input:disabled ~ span {
+  background: var(--app-disabled);
+  border-color: var(--app-disabled);
+}
+
 .container span:after {
   content: "";
   position: absolute;
