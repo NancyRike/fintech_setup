@@ -1,6 +1,6 @@
 import React from "react";
 import { logo } from "../../assets/images";
-import { Checkbox } from "../../components";
+import { Checkbox, RadioButton } from "../../components";
 import { Button } from "../../components";
 
 import styles from "./styles.module.css";
@@ -15,7 +15,6 @@ const Components = () => {
         {/* Checkbox */}
         <div className="my-4">
           <h1 className="fw-bold">Checkbox</h1>
-
           <div>
             <div className="my-3">
               <h6 className="fw-bold">Simple checkbox</h6>
@@ -27,23 +26,38 @@ const Components = () => {
             </div>
           </div>
         </div>
+        {/* Radio Button*/}
+        <div className="my-4">
+          <h1 className="fw-bold">RadioButton</h1>
+          <div>
+            <div className="my-3">
+              <h6 className="fw-bold">Favourite Js framework</h6>
+              <RadioButton label="React" name="jsFramework" value="React" />
+              <RadioButton label="Vue" name="jsFramework" value="Vue" />
+              <RadioButton label="Ember" name="jsFramework" value="Ember" />
+            </div>
+            <div className="my-3">
+              <h6 className="fw-bold">RadioButton disabled</h6>
+              <RadioButton label={<p>Click me</p>} disabled />
+            </div>
+          </div>
+        </div>
         {/* buttons */}
         <h1 className="fw-bold my-4">Buttons</h1>
 
         <div className="d-flex w-100 justify-content-between align-item-center">
           <div>
             <p className="fw-bold">A standard button</p>
-            <Button buttonLabel={'Save'}/>
+            <Button buttonLabel={"Save"} />
           </div>
           <div>
             <p className="fw-bold">An outline button</p>
-            <Button buttonLabel={'Save Me'} outlineButton={true}/>
+            <Button buttonLabel={"Save Me"} outlineButton={true} />
           </div>
           <div className="w-50">
             <p className="fw-bold">A large standard button</p>
-            <Button buttonLabel={'See Me'} buttonStyling={'w-50'}/>
+            <Button buttonLabel={"See Me"} buttonStyling={"w-50"} />
           </div>
-
         </div>
       </div>
     </main>
