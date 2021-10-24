@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { logo } from "../../assets/images";
-import { Checkbox, RadioButton } from "../../components";
+import { Checkbox, Loader, RadioButton } from "../../components";
 import { Button } from "../../components";
 
 import styles from "./styles.module.css";
 
 const Components = () => {
+  const [load, setLoad] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoad(false);
+    }, 3000);
+  }, []);
+
   return (
     <main className={styles.container}>
+      {load ? <Loader /> : ""}
       <div className="container py-4">
         <div>
           <img src={logo} alt="logo" />
