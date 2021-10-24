@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { logo } from "../../assets/images";
-import { Checkbox, Loader, RadioButton } from "../../components";
+import { Checkbox, Inputs, Loader, RadioButton } from "../../components";
 import { Button } from "../../components";
 
 import styles from "./styles.module.css";
@@ -52,6 +52,31 @@ const Components = () => {
             <div className="my-3">
               <h6 className="fw-bold">RadioButton disabled</h6>
               <RadioButton label={<p>Click me</p>} disabled />
+            </div>
+          </div>
+        </div>
+        {/* Inputs*/}
+        <div className="my-4">
+          <h1 className="fw-bold">Input</h1>
+          <div>
+            <div className="my-3">
+              <h6 className="fw-bold">Different input states</h6>
+              <div className="my-3">
+                <Inputs borderLess placeHolder="This is a bordeless input" />
+              </div>
+              <div className="my-3">
+                <Inputs placeHolder="This is a bordered input" />
+              </div>
+              <div className="my-3">
+                <Inputs disabled placeHolder="This is a disabled input" />
+              </div>
+              <div className="my-3">
+                <Inputs
+                  disabled
+                  borderLess
+                  placeHolder="This is a disabled borderless input"
+                />
+              </div>
             </div>
           </div>
         </div>
