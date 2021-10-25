@@ -1,0 +1,43 @@
+.header {
+  position: relative;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+
+.header:hover {
+  border-bottom: 1px solid var(--app-dark-blue) !important;
+  color: #4e6fb6;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.header:hover .arrow path {
+  stroke: var(--app-dark-blue);
+}
+
+.list {
+  /* display: inline-block; */
+  background: #fff;
+  border-radius: 4px;
+}
+
+.list ul {
+  margin: 0;
+  padding: 0;
+}
+
+.list button {
+  border: none;
+  background: none;
+  color: #344563;
+  text-align: left;
+}
+
+.list button:hover,
+.list button:focus {
+  background: var(--app-light-bg);
+}
