@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { ArrowDown } from "../../assets";
+import { useOnClickOutside } from "../../hooks/useOutsideClick";
 
 import styles from "./styles.module.css";
 
 const Dropdown = ({ placeHolder, items }) => {
   const [showList, setShowList] = useState(false);
   const [currentValue, setCurrentValue] = useState(null);
+
+  const ref = useRef();
+
+  useOnClickOutside(ref, () => setShowList(false));
 
   const handleShowList = () => {
     setShowList(!showList);
@@ -17,7 +22,7 @@ const Dropdown = ({ placeHolder, items }) => {
   };
 
   return (
-    <div className={`${styles.container}`}>
+    <div className={`${styles.container}`} ref={ref}>
       <div className={`${styles.header} py-2`} onClick={handleShowList}>
         <div>
           <span>{currentValue ? currentValue : placeHolder}</span>
