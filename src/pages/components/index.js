@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { logo } from "../../assets/images";
-import { Checkbox, Inputs, Loader, RadioButton } from "../../components";
-import { Button } from "../../components";
+import { Checkbox, Inputs, Loader, RadioButton, Button, Modal } from "../../components";
 
 import styles from "./styles.module.css";
 
 const Components = () => {
+  const [displayModal, setDisplayModal] = useState({details: "", visibility: false})
+  const handleClick = ()=>{
+    setDisplayModal({
+      visibility: true,
+    })
+  }
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
@@ -17,6 +22,7 @@ const Components = () => {
   return (
     <main className={styles.container}>
       {load ? <Loader /> : ""}
+      {displayModal.visibility? (<Modal><ViewModalContent setDisplayModal={setDisplayModal}/></Modal>): null}
       <div className="container py-4">
         <div>
           <img src={logo} alt="logo" />
@@ -107,7 +113,7 @@ const Components = () => {
           </div>
           <div className="w-50">
             <p className="fw-bold">A large standard button</p>
-            <Button buttonLabel={"See Me"} buttonStyling={"w-50"} />
+            <Button buttonLabel={'Prompt modal'} buttonStyling={'w-50'} onClick={handleClick}/>
           </div>
         </div>
       </div>
@@ -116,3 +122,18 @@ const Components = () => {
 };
 
 export { Components };
+
+// modal
+export const ViewModalContent =({setDisplayModal}) => {
+  const handleClose=()=>{
+    setDisplayModal({
+      visibility:false,
+    })
+  }
+  return(
+    <div>
+      <h1 className="d-flex justify-content-end" onClick={handleClose}  style={{cursor: "pointer"}}>x</h1>
+      <h2>refresh to close modal</h2>
+    </div>
+  )
+}
