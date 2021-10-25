@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import { logo } from "../../assets/images";
-import { Checkbox, Button, Modal } from "../../components";
+import { Checkbox, Inputs, Loader, RadioButton, Button, Modal } from "../../components";
 
 import styles from "./styles.module.css";
 
@@ -11,8 +11,17 @@ const Components = () => {
       visibility: true,
     })
   }
+  const [load, setLoad] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoad(false);
+    }, 3000);
+  }, []);
+
   return (
     <main className={styles.container}>
+      {load ? <Loader /> : ""}
       {displayModal.visibility? (<Modal><ViewModalContent setDisplayModal={setDisplayModal}/></Modal>): null}
       <div className="container py-4">
         <div>
@@ -21,7 +30,6 @@ const Components = () => {
         {/* Checkbox */}
         <div className="my-4">
           <h1 className="fw-bold">Checkbox</h1>
-
           <div>
             <div className="my-3">
               <h6 className="fw-bold">Simple checkbox</h6>
@@ -31,6 +39,64 @@ const Components = () => {
               <h6 className="fw-bold">Checkbox with bold font label</h6>
               <Checkbox label={<p className="fw-bold">Click me</p>} />
             </div>
+            <div className="my-3">
+              <h6 className="fw-bold">Checkbox disabled</h6>
+              <Checkbox label={<p>Click me</p>} disabled />
+            </div>
+          </div>
+        </div>
+        {/* Radio Button*/}
+        <div className="my-4">
+          <h1 className="fw-bold">RadioButton</h1>
+          <div>
+            <div className="my-3">
+              <h6 className="fw-bold">Favourite Js framework</h6>
+              <RadioButton label="React" name="jsFramework" value="React" />
+              <RadioButton label="Vue" name="jsFramework" value="Vue" />
+              <RadioButton label="Ember" name="jsFramework" value="Ember" />
+            </div>
+            <div className="my-3">
+              <h6 className="fw-bold">RadioButton disabled</h6>
+              <RadioButton label={<p>Click me</p>} disabled />
+            </div>
+          </div>
+        </div>
+        {/* Inputs*/}
+        <div className="my-4">
+          <h1 className="fw-bold">Input</h1>
+          <div>
+            <div className="my-3">
+              <h6 className="fw-bold">Different input states</h6>
+              <div className="my-3">
+                <Inputs borderLess placeHolder="This is a bordeless input" />
+              </div>
+              <div className="my-3">
+                <Inputs placeHolder="This is a bordered input" />
+              </div>
+              <div className="my-3">
+                <Inputs
+                  placeHolder="This is a bordered input's error state"
+                  error="Something went wrong "
+                />
+              </div>
+              <div className="my-3">
+                <Inputs
+                  borderLess
+                  placeHolder="This is a borderless input's error state"
+                  error="Something went wrong "
+                />
+              </div>
+              <div className="my-3">
+                <Inputs disabled placeHolder="This is a disabled input" />
+              </div>
+              <div className="my-3">
+                <Inputs
+                  disabled
+                  borderLess
+                  placeHolder="This is a disabled borderless input"
+                />
+              </div>
+            </div>
           </div>
         </div>
         {/* buttons */}
@@ -39,17 +105,16 @@ const Components = () => {
         <div className="d-flex w-100 justify-content-between align-item-center">
           <div>
             <p className="fw-bold">A standard button</p>
-            <Button buttonLabel={'Save'}/>
+            <Button buttonLabel={"Save"} />
           </div>
           <div>
             <p className="fw-bold">An outline button</p>
-            <Button buttonLabel={'Save Me'} outlineButton={true}/>
+            <Button buttonLabel={"Save Me"} outlineButton={true} />
           </div>
           <div className="w-50">
             <p className="fw-bold">A large standard button</p>
             <Button buttonLabel={'Prompt modal'} buttonStyling={'w-50'} onClick={handleClick}/>
           </div>
-
         </div>
       </div>
     </main>

@@ -1,7 +1,6 @@
 .button {
   border-radius: 17px;
   padding: 10px 32px;
-  font-family:' Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -9,12 +8,12 @@
 }
 
 .outlineButton {
-    background-color: var(--app-primary-white);
-    border: 2px solid #0035a3;
-    color: var(--app-dark-blue);
+  background-color: var(--app-primary-white);
+  border: 2px solid #0035a3;
+  color: var(--app-dark-blue);
 }
-.standardButton{
-    background-color: var(--app-dark-blue);
-    border: none;
-    color: var(--app-primary-white);
+.standardButton {
+  background-color: var(--app-dark-blue);
+  border: none;
+  color: var(--app-primary-white);
 }

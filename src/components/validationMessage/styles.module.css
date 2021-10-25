@@ -1,0 +1,14 @@
+.validation {
+  color: var(--app-red);
+  font-size: 12px;
+}
+
+.validation svg {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.validation svg > * {
+  fill: var(--app-red);
+}
