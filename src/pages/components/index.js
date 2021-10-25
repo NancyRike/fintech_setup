@@ -68,6 +68,19 @@ const Components = () => {
                 <Inputs placeHolder="This is a bordered input" />
               </div>
               <div className="my-3">
+                <Inputs
+                  placeHolder="This is a bordered input's error state"
+                  error="Something went wrong "
+                />
+              </div>
+              <div className="my-3">
+                <Inputs
+                  borderLess
+                  placeHolder="This is a borderless input's error state"
+                  error="Something went wrong "
+                />
+              </div>
+              <div className="my-3">
                 <Inputs disabled placeHolder="This is a disabled input" />
               </div>
               <div className="my-3">
