@@ -1,0 +1,50 @@
+.cardContainer {
+  background-color: var(--app-dark-blue);
+  width: 26em;
+  height: 15em;
+  border-radius: 15px;
+}
+.cardHeader {
+  width: 15em;
+  height: 2em;
+  border-radius: 0px 0px 25px 25px;
+  background-color: var(--app-primary-white);
+}
+.cardTitle {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--app-dark-blue);
+}
+
+@media screen and (max-width: 500px) {
+  .cardContainer {
+    width: 23em;
+    height: 12em;
+  }
+  .cardHeader {
+    width: 12em;
+    height: 2em;
+  }
+}
+@media screen and (max-width: 390px) {
+  .cardContainer {
+    width: 20em;
+    height: 12em;
+  }
+  .cardHeader {
+    width: 11em;
+    height: 2em;
+  }
+}
+@media screen and (max-width: 345px) {
+  .cardContainer {
+    width: 18em;
+    height: 11em;
+  }
+  .cardHeader {
+    width: 11em;
+    height: 2em;
+  }
+}
