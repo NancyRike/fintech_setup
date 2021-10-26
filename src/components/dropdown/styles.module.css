@@ -1,11 +1,10 @@
 .header {
   position: relative;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--app-dark-blue);
   cursor: pointer;
 }
 
 .header:hover {
-  border-bottom: 1px solid var(--app-dark-blue) !important;
   color: #4e6fb6;
 }
 
@@ -20,7 +19,6 @@
 }
 
 .list {
-  /* display: inline-block; */
   background: #fff;
   border-radius: 4px;
 }

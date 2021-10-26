@@ -1,0 +1,32 @@
+.container {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.authBgA {
+  background: url("../../assets/images/authBgA.png");
+}
+
+.authBgB {
+  background: url("../../assets/images/authBgB.png");
+}
+
+@media screen and (max-width: 768px) {
+  .container img {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container img {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container img {
+    width: 50px;
+  }
+}
