@@ -70,6 +70,10 @@
   background: var(--app-disabled);
 }
 
+.container input:disabled::placeholder {
+  color: gray !important;
+}
+
 @media screen and (max-width: 768px) {
   .container input::placeholder {
     font-size: 12px;

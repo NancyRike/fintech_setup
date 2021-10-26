@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { logo } from "../../assets/images";
-import { Checkbox, Inputs, Loader, RadioButton, Button, Modal, CreditCard, ToggleButton } from "../../components";
-
+import { Checkbox, Inputs, Loader, RadioButton, Button, Modal, CreditCard, ToggleButton , Dropdown} from "../../components";
 import styles from "./styles.module.css";
 
 const Components = () => {
-  const [displayModal, setDisplayModal] = useState({details: "", visibility: false})
-  const handleClick = ()=>{
+  const [displayModal, setDisplayModal] = useState({
+    details: "",
+    visibility: false,
+  });
+  const handleClick = () => {
     setDisplayModal({
       visibility: true,
-    })
-  }
+    });
+  };
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
@@ -22,7 +24,11 @@ const Components = () => {
   return (
     <main className={styles.container}>
       {load ? <Loader /> : ""}
-      {displayModal.visibility? (<Modal><ViewModalContent setDisplayModal={setDisplayModal}/></Modal>): null}
+      {displayModal.visibility ? (
+        <Modal>
+          <ViewModalContent setDisplayModal={setDisplayModal} />
+        </Modal>
+      ) : null}
       <div className="container py-4">
         <div>
           <img src={logo} alt="logo" />
@@ -117,7 +123,39 @@ const Components = () => {
           </div>
           <div className="w-md-50 w-sm-100">
             <p className="fw-bold">A large standard button</p>
-            <Button buttonLabel={'Prompt modal'} buttonStyling={'w-md-50'} onClick={handleClick}/>
+            <Button
+              buttonLabel={"Prompt modal"}
+              buttonStyling={"w-md-50"}
+              onClick={handleClick}
+            />
+          </div>
+        </div>
+        {/* Dropdown*/}
+        <div className="my-4">
+          <h1 className="fw-bold">Dropdown</h1>
+          <div>
+            <div className="my-3">
+              <h6 className="fw-bold">Favourite Js framework</h6>
+              <div className="row">
+                <div className="col-12 col-md-6">
+                  <Dropdown
+                    placeHolder={"Choose from list"}
+                    items={["React", "Vue", "Ember"]}
+                  />
+                </div>
+                <div className="col-12 col-md-6">
+                  <Dropdown
+                    placeHolder={"Select Business Type"}
+                    items={[
+                      "Sole Proprietorship",
+                      "Private Limited Company (Ltd.)",
+                      "Public Limited Company (Plc.)",
+                      "Public Company Limited By Guarantee (ULtd.)",
+                    ]}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         {/* Credit card */}
@@ -136,16 +174,22 @@ const Components = () => {
 export { Components };
 
 // modal
-export const ViewModalContent =({setDisplayModal}) => {
-  const handleClose=()=>{
+export const ViewModalContent = ({ setDisplayModal }) => {
+  const handleClose = () => {
     setDisplayModal({
-      visibility:false,
-    })
-  }
-  return(
+      visibility: false,
+    });
+  };
+  return (
     <div>
-      <h1 className="d-flex justify-content-end" onClick={handleClose}  style={{cursor: "pointer"}}>x</h1>
+      <h1
+        className="d-flex justify-content-end"
+        onClick={handleClose}
+        style={{ cursor: "pointer" }}
+      >
+        x
+      </h1>
       <h2>refresh to close modal</h2>
     </div>
-  )
-}
+  );
+};
