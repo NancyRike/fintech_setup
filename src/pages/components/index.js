@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { logo } from "../../assets/images";
-import { Checkbox, Inputs, Loader, RadioButton, Button, Modal } from "../../components";
+import { Checkbox, Inputs, Loader, RadioButton, Button, Modal, CreditCard, ToggleButton } from "../../components";
 
 import styles from "./styles.module.css";
 
@@ -102,7 +102,11 @@ const Components = () => {
         {/* buttons */}
         <h1 className="fw-bold my-4">Buttons</h1>
 
-        <div className="d-flex w-100 justify-content-between align-item-center">
+        <div className="d-md-flex w-100 justify-content-between align-item-center">
+          <div>
+          <p className="fw-bold">A Toggle button</p>
+            <ToggleButton/>
+          </div>
           <div>
             <p className="fw-bold">A standard button</p>
             <Button buttonLabel={"Save"} />
@@ -111,10 +115,18 @@ const Components = () => {
             <p className="fw-bold">An outline button</p>
             <Button buttonLabel={"Save Me"} outlineButton={true} />
           </div>
-          <div className="w-50">
+          <div className="w-md-50 w-sm-100">
             <p className="fw-bold">A large standard button</p>
-            <Button buttonLabel={'Prompt modal'} buttonStyling={'w-50'} onClick={handleClick}/>
+            <Button buttonLabel={'Prompt modal'} buttonStyling={'w-md-50'} onClick={handleClick}/>
           </div>
+        </div>
+        {/* Credit card */}
+        <div>
+        <h1 className="fw-bold my-4">Credit Card</h1>
+
+          <CreditCard cardTitle={'Mock Credit Card'}>
+              <img src={logo} alt="" />
+          </CreditCard>
         </div>
       </div>
     </main>
