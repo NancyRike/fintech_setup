@@ -10,7 +10,7 @@ import {
 import { authBgA } from "./assets";
 import { AuthLayout } from "./layouts";
 
-import { Components, CreateAccount, ForgotPassword } from "./pages";
+import { Components, CreateAccount, ForgotPassword, SignIn } from "./pages";
 
 // Layout routes
 
@@ -47,6 +47,12 @@ const AppRouter = () => {
           path={"/create-account"}
           exact={true}
           Component={() => <CreateAccount />}
+        />
+        <AuthRoute
+          authBgA={true}
+          path={"/sign-in"}
+          exact={true}
+          Component={() => <SignIn />}
         />
         <AuthRoute
           path={"/forgot-password"}

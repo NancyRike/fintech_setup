@@ -15,13 +15,18 @@
 }
 
 .container p,
-.container label {
+.container label,
+.container span {
   font-size: 0.75rem;
 }
 
 .highlight {
   color: var(--app-light-blue);
   cursor: pointer;
+}
+
+.footer {
+  margin-top: 100px !important;
 }
 
 @media screen and (max-width: 1000px) {
