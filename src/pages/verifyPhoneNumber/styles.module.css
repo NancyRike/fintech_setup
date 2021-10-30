@@ -1,0 +1,28 @@
+.container form {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.container h1,
+.container p,
+.container label,
+.container small {
+  color: var(--app-dark-blue);
+}
+
+.container p,
+.container label {
+  font-size: 0.85rem;
+}
+.container small{
+    font-size: 0.65rem;
+}
+.textHighlight{
+    cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .container form {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
