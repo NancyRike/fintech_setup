@@ -10,6 +10,11 @@ import {
 import { AuthLayout } from "./layouts";
 
 import { Components, ForgotPassword } from "./pages";
+import AddPhoneNumber from "./pages/addPhoneNumber";
+import EmailVerificationSuccess from "./pages/successfulEmailVerification";
+import PhoneVerificationSuccess from "./pages/successfulPhoneVerification";
+import VerifyEmail from "./pages/verifyEmail";
+import VerifyPhoneNumber from "./pages/verifyPhoneNumber";
 
 // Layout routes
 
@@ -45,6 +50,31 @@ const AppRouter = () => {
           path={"/forgot-password"}
           exact={true}
           Component={() => <ForgotPassword />}
+        />
+        <AuthRoute
+          path={"/verify-email"}
+          exact={true}
+          Component={() => <VerifyEmail/>}
+        />
+        <AuthRoute
+          path={"/verify-phonenumber"}
+          exact={true}
+          Component={() => <VerifyPhoneNumber/>}
+        />
+        <AuthRoute
+          path={"/email-verification-success"}
+          exact={true}
+          Component={() => <EmailVerificationSuccess/>}
+        />
+        <AuthRoute
+          path={"/add-phonenumber"}
+          exact={true}
+          Component={() => <AddPhoneNumber/>}
+        />
+        <AuthRoute
+          path={"/phone-verification-success"}
+          exact={true}
+          Component={() => <PhoneVerificationSuccess/>}
         />
         <Route exact path="/components" render={() => <Components />} />
         <Route path="*" render={() => <Redirect to="/" />} />
