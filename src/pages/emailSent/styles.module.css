@@ -1,0 +1,9 @@
+.container h3,
+.container label {
+  color: var(--app-dark-blue);
+}
+
+.container p,
+.container label {
+  font-size: 0.85rem;
+}

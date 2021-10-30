@@ -7,10 +7,15 @@ import {
   Switch,
   useLocation,
 } from "react-router-dom";
-import { authBgA } from "./assets";
 import { AuthLayout } from "./layouts";
 
-import { Components, CreateAccount, ForgotPassword, SignIn } from "./pages";
+import {
+  Components,
+  CreateAccount,
+  EmailSent,
+  ForgotPassword,
+  SignIn,
+} from "./pages";
 
 // Layout routes
 
@@ -47,6 +52,11 @@ const AppRouter = () => {
           path={"/create-account"}
           exact={true}
           Component={() => <CreateAccount />}
+        />
+        <AuthRoute
+          path={"/email-sent"}
+          exact={true}
+          Component={() => <EmailSent />}
         />
         <AuthRoute
           authBgA={true}
