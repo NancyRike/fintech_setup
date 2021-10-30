@@ -7,18 +7,19 @@ import {
   Switch,
   useLocation,
 } from "react-router-dom";
+import { authBgA } from "./assets";
 import { AuthLayout } from "./layouts";
 
-import { Components, ForgotPassword } from "./pages";
+import { Components, CreateAccount, ForgotPassword } from "./pages";
 
 // Layout routes
 
-const AuthRoute = ({ Component, bg, ...rest }) => {
+const AuthRoute = ({ Component, authBgA, ...rest }) => {
   return (
     <Route
       {...rest}
       render={(props) => (
-        <AuthLayout bg={bg}>
+        <AuthLayout authBgA={authBgA}>
           <Component {...props} />
         </AuthLayout>
       )}
@@ -41,6 +42,12 @@ const AppRouter = () => {
     <Router basename={"/"}>
       <ScrollToTop />
       <Switch>
+        <AuthRoute
+          authBgA={true}
+          path={"/create-account"}
+          exact={true}
+          Component={() => <CreateAccount />}
+        />
         <AuthRoute
           path={"/forgot-password"}
           exact={true}

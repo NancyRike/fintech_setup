@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 
 const ForgotPassword = () => {
   return (
-    <main className={`${styles.container}`}>
+    <main className={`${styles.container} mt-5`}>
       <form>
         <div>
           <h1 className="text-center fw-bold mb-5">Forgot Password</h1>
