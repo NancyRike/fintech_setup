@@ -1,9 +1,12 @@
 import React from "react";
+import { useHistory } from "react-router";
 import { Inputs, Button } from "../../components";
 
 import styles from "./styles.module.css";
 
 const SignIn = () => {
+  const history = useHistory();
+
   return (
     <main className={`${styles.container} container pb-5`}>
       <div className={`${styles.formContainer} px-1 px-md-5  ms-lg-auto`}>
@@ -24,7 +27,10 @@ const SignIn = () => {
                   </label>
                   <Inputs borderLess id="password" />
                 </span>
-                <span className={`${styles.highlight} d-block text-end`}>
+                <span
+                  className={`${styles.highlight} d-block text-end`}
+                  onClick={() => history.push("/forgot-password")}
+                >
                   Forgot password?
                 </span>
                 <div
@@ -32,7 +38,12 @@ const SignIn = () => {
                 >
                   <p>
                     Don't have an account?{" "}
-                    <span className={`${styles.highlight}`}>Sign up</span>
+                    <span
+                      className={`${styles.highlight}`}
+                      onClick={() => history.push("/create-account")}
+                    >
+                      Sign up
+                    </span>
                   </p>
                   <Button buttonLabel="Submit" />
                 </div>

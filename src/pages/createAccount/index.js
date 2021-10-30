@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router";
+import { EyeOpen } from "../../assets";
 import { Inputs, Button } from "../../components";
 
 import styles from "./styles.module.css";
 
 const CreateAccount = () => {
+  const [newPassword, setNewPassword] = useState(false);
+
+  const history = useHistory();
+
   return (
     <main className={`${styles.container} container pb-5`}>
       <div className={`${styles.formContainer} px-1 px-md-5  ms-lg-auto`}>
@@ -46,7 +52,7 @@ const CreateAccount = () => {
                   <label htmlFor="password" className="fw-bold">
                     Password
                   </label>
-                  <Inputs borderLess id="password" />
+                  <Inputs borderLess id="password" Icon2={<EyeOpen />} />
                 </span>
                 <span className="my-3 d-block">
                   <label htmlFor="aboutUs" className="fw-bold">
@@ -63,7 +69,12 @@ const CreateAccount = () => {
                 <div className="d-flex justify-content-between align-items-end mt-5">
                   <p>
                     Have an account?{" "}
-                    <span className={`${styles.highlight}`}>Sign in</span>
+                    <span
+                      className={`${styles.highlight}`}
+                      onClick={() => history.push("/sign-in")}
+                    >
+                      Sign in
+                    </span>
                   </p>
                   <Button buttonLabel="Submit" />
                 </div>

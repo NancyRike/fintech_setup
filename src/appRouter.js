@@ -14,6 +14,7 @@ import {
   CreateAccount,
   EmailSent,
   ForgotPassword,
+  ResetPassword,
   SignIn,
 } from "./pages";
 
@@ -49,7 +50,7 @@ const AppRouter = () => {
       <Switch>
         <AuthRoute
           authBgA={true}
-          path={"/create-account"}
+          path={"/"}
           exact={true}
           Component={() => <CreateAccount />}
         />
@@ -68,6 +69,11 @@ const AppRouter = () => {
           path={"/forgot-password"}
           exact={true}
           Component={() => <ForgotPassword />}
+        />
+        <AuthRoute
+          path={"/reset-password"}
+          exact={true}
+          Component={() => <ResetPassword />}
         />
         <Route exact path="/components" render={() => <Components />} />
         <Route path="*" render={() => <Redirect to="/" />} />
