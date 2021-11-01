@@ -37,7 +37,7 @@ const VerifyEmail = () => {
       <main className={`${styles.container}`}>
         <form>
           <div>
-            <h1 className="text-center fw-bold mb-5">Verify Email Address</h1>
+            <h2 className="text-center fw-bold mb-5">Verify Email Address</h2>
             <div>
               <p>
                 Type in the verification code sent to
@@ -63,8 +63,14 @@ const VerifyEmail = () => {
                   Didn’t receive the code?
                   <b className={`${styles.textHighlight}`}> Resend </b>
                 </small>
-                <div className="d-flex justify-content-end mt-5">
-                  <Button buttonLabel="Submit" onClick={handleSubmit} />
+                <div className="row mt-5 justify-content-end ">
+                  <div className="col-12 col-md-3 p-0">
+                    <Button
+                      buttonLabel="Submit"
+                      onClick={handleSubmit}
+                      buttonStyling="w-100"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

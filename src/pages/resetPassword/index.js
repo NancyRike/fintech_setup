@@ -9,10 +9,10 @@ const ResetPassword = () => {
   const [confirmNewPassword, setConfirmNewPassword] = useState(false);
 
   return (
-    <main className={`${styles.container} mt-5`}>
+    <main className={`${styles.container}`}>
       <form>
         <div>
-          <h1 className="text-center fw-bold mb-5">Set Your New Password</h1>
+          <h2 className="text-center fw-bold mb-5">Set Your New Password</h2>
           <div>
             <p>
               Ensure your new password contains at least 1 lowercase, 1
@@ -51,9 +51,17 @@ const ResetPassword = () => {
                   type={!confirmNewPassword ? "text" : "password"}
                 />
               </span>
-              <div className="d-flex justify-content-between mt-5">
-                <Button buttonLabel="Back" outlineButton />
-                <Button buttonLabel="Submit" />
+              <div className="row align-items-center justify-content-between mt-5">
+                <div className="col-12 col-md-3">
+                  <Button
+                    buttonLabel="Back"
+                    outlineButton
+                    buttonStyling="w-100 mb-4 mb-md-0"
+                  />
+                </div>
+                <div className="col-12 col-md-3">
+                  <Button buttonLabel="Submit" buttonStyling="w-100" />
+                </div>
               </div>
             </div>
           </div>

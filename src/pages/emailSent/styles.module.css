@@ -1,4 +1,11 @@
-.container h3,
+.container {
+  display: flex;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h2,
 .container p,
 .container label {
   color: var(--app-dark-blue);
@@ -7,4 +14,10 @@
 .container p,
 .container label {
   font-size: 0.85rem;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    padding: 0 20px;
+  }
 }

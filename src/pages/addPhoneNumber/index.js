@@ -39,9 +39,9 @@ const AddPhoneNumber = () => {
             return (
               <form>
                 <div>
-                  <h1 className="text-center fw-bold mb-5">
+                  <h2 className="text-center fw-bold mb-5">
                     Verify Phone Number
-                  </h1>
+                  </h2>
                   <div>
                     <p>
                       Please verify your phone number to start account
@@ -62,11 +62,16 @@ const AddPhoneNumber = () => {
                         }
                         onChange={props.handleChange("phoneNumber")}
                       />
-                      <div className="d-flex justify-content-end mt-5">
-                        <Button
-                          buttonLabel="Submit"
-                          onClick={props.handleSubmit}
-                        />
+                      <div className="container">
+                        <div className="row mt-5 justify-content-end">
+                          <div className="col-12 col-md-3 p-0">
+                            <Button
+                              buttonLabel="Submit"
+                              onClick={props.handleSubmit}
+                              buttonStyling="w-100"
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

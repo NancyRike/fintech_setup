@@ -1,9 +1,15 @@
+.container {
+  display: flex;
+  height: 70vh;
+  align-items: center;
+}
+
 .container form {
   width: 600px;
   margin: 0 auto;
 }
 
-.container h1,
+.container h2,
 .container p,
 .container label {
   color: var(--app-dark-blue);

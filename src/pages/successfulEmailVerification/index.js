@@ -28,9 +28,9 @@ const EmailVerificationSuccess = () => {
             >
               <img src={success} alt="successful!" />
             </div>
-            <h1 className="text-center fw-bold mt-2 mb-3">
+            <h2 className="text-center fw-bold mt-2 mb-3">
               Verification Successful
-            </h1>
+            </h2>
             <div>
               <p>
                 Your email was successfully verified. You’ll be automatically
@@ -38,8 +38,16 @@ const EmailVerificationSuccess = () => {
                 below.
               </p>
               <div>
-                <div className="d-flex justify-content-center mt-4">
-                  <Button buttonLabel="Continue" onClick={handleContinue} />
+                <div className="container">
+                  <div className="row mt-5 justify-content-center ">
+                    <div className="col-12 col-md-3 p-0">
+                      <Button
+                        buttonLabel="Continue"
+                        onClick={handleContinue}
+                        buttonStyling="w-100"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
