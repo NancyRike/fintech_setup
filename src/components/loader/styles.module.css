@@ -1,4 +1,6 @@
 .container {
+  top: 0;
+  left: 0;
   width: 100vw;
   min-height: 120vh;
   z-index: 1200;

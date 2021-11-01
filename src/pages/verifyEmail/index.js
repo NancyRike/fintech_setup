@@ -31,7 +31,6 @@ const VerifyEmail = () => {
     }, 3000);
   }, []);
 
-  
   return (
     <div>
       {load ? <Loader /> : ""}
@@ -52,7 +51,11 @@ const VerifyEmail = () => {
                   value={values.verificationCode}
                   type={"text"}
                   onChange={handleChange("verificationCode")}
-                  error={touched.verificationCode && errors.verificationCode}
+                  error={
+                    touched.verificationCode && errors.verificationCode
+                      ? errors.verificationCode
+                      : ""
+                  }
                   borderLess
                   id="verificationCode"
                 />
@@ -72,8 +75,10 @@ const VerifyEmail = () => {
   );
 };
 
-export default VerifyEmail;
+export { VerifyEmail };
 
-export const VerifyMailSchema = yup.object().shape({
-  verificationCode: yup.number('verification number is required').required("verification number is required"),
+const VerifyMailSchema = yup.object().shape({
+  verificationCode: yup
+    .number("mkdmkfdkm")
+    .required("verification number is required"),
 });

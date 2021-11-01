@@ -1,9 +1,14 @@
 import React from "react";
+import { useHistory } from "react-router";
 import { Inputs, Button } from "../../components";
 
 import styles from "./styles.module.css";
 
 const ForgotPassword = () => {
+  const history = useHistory();
+
+  const handleSubmit = () => history.push("email-sent");
+
   return (
     <main className={`${styles.container} mt-5`}>
       <form>
@@ -18,7 +23,7 @@ const ForgotPassword = () => {
               <Inputs borderLess id="email" />
               <div className="d-flex justify-content-between mt-5">
                 <Button buttonLabel="Back" outlineButton />
-                <Button buttonLabel="Submit" />
+                <Button buttonLabel="Submit" onClick={handleSubmit} />
               </div>
             </div>
           </div>

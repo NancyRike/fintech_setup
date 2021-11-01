@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import { AuthLayout } from "./layouts";
 
-<<<<<<< HEAD
 import {
   Components,
   CreateAccount,
@@ -17,15 +16,12 @@ import {
   ForgotPassword,
   ResetPassword,
   SignIn,
+  AddPhoneNumber,
+  EmailVerificationSuccess,
+  PhoneVerificationSuccess,
+  VerifyEmail,
+  VerifyPhoneNumber,
 } from "./pages";
-=======
-import { Components, ForgotPassword } from "./pages";
-import AddPhoneNumber from "./pages/addPhoneNumber";
-import EmailVerificationSuccess from "./pages/successfulEmailVerification";
-import PhoneVerificationSuccess from "./pages/successfulPhoneVerification";
-import VerifyEmail from "./pages/verifyEmail";
-import VerifyPhoneNumber from "./pages/verifyPhoneNumber";
->>>>>>> 78afad6b81461394cc467e460e2dc4838d27d6d4
 
 // Layout routes
 
@@ -83,29 +79,31 @@ const AppRouter = () => {
           path={"/reset-password"}
           exact={true}
           Component={() => <ResetPassword />}
-          path={"/verify-email"}
+        />
+        <AuthRoute
           exact={true}
-          Component={() => <VerifyEmail/>}
+          path={"/verify-email"}
+          Component={() => <VerifyEmail />}
         />
         <AuthRoute
           path={"/verify-phonenumber"}
           exact={true}
-          Component={() => <VerifyPhoneNumber/>}
+          Component={() => <VerifyPhoneNumber />}
         />
         <AuthRoute
           path={"/email-verification-success"}
           exact={true}
-          Component={() => <EmailVerificationSuccess/>}
+          Component={() => <EmailVerificationSuccess />}
         />
         <AuthRoute
           path={"/add-phonenumber"}
           exact={true}
-          Component={() => <AddPhoneNumber/>}
+          Component={() => <AddPhoneNumber />}
         />
         <AuthRoute
           path={"/phone-verification-success"}
           exact={true}
-          Component={() => <PhoneVerificationSuccess/>}
+          Component={() => <PhoneVerificationSuccess />}
         />
         <Route exact path="/components" render={() => <Components />} />
         <Route path="*" render={() => <Redirect to="/" />} />
