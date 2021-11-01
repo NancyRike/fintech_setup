@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { logo } from "../../assets";
 
 import styles from "./styles.module.css";
@@ -11,8 +12,10 @@ const AuthLayout = ({ children, authBgA }) => {
       }`}
     >
       <header className="container-fluid">
-        <div className="ms-4 py-4">
-          <img src={logo} alt="logo" />
+        <div className="ms-1 py-4">
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
       </header>
       {children}
