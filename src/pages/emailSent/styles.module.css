@@ -2,16 +2,12 @@
   display: flex;
   height: 70vh;
   align-items: center;
-}
-.container form {
-  width: 600px;
-  margin: 0 auto;
+  justify-content: center;
 }
 
 .container h2,
 .container p,
-.container label,
-.container small {
+.container label {
   color: var(--app-dark-blue);
 }
 
@@ -19,15 +15,9 @@
 .container label {
   font-size: 0.85rem;
 }
-.container small {
-  font-size: 0.65rem;
-}
-.textHighlight {
-  cursor: pointer;
-}
+
 @media screen and (max-width: 700px) {
-  .container form {
-    width: 100%;
+  .container {
     padding: 0 20px;
   }
 }

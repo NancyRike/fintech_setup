@@ -9,21 +9,28 @@ import {
 } from "react-router-dom";
 import { AuthLayout } from "./layouts";
 
-import { Components, ForgotPassword } from "./pages";
-import AddPhoneNumber from "./pages/addPhoneNumber";
-import EmailVerificationSuccess from "./pages/successfulEmailVerification";
-import PhoneVerificationSuccess from "./pages/successfulPhoneVerification";
-import VerifyEmail from "./pages/verifyEmail";
-import VerifyPhoneNumber from "./pages/verifyPhoneNumber";
+import {
+  Components,
+  CreateAccount,
+  EmailSent,
+  ForgotPassword,
+  ResetPassword,
+  SignIn,
+  AddPhoneNumber,
+  EmailVerificationSuccess,
+  PhoneVerificationSuccess,
+  VerifyEmail,
+  VerifyPhoneNumber,
+} from "./pages";
 
 // Layout routes
 
-const AuthRoute = ({ Component, bg, ...rest }) => {
+const AuthRoute = ({ Component, authBgA, ...rest }) => {
   return (
     <Route
       {...rest}
       render={(props) => (
-        <AuthLayout bg={bg}>
+        <AuthLayout authBgA={authBgA}>
           <Component {...props} />
         </AuthLayout>
       )}
@@ -47,34 +54,56 @@ const AppRouter = () => {
       <ScrollToTop />
       <Switch>
         <AuthRoute
+          authBgA={true}
+          path={"/"}
+          exact={true}
+          Component={() => <CreateAccount />}
+        />
+        <AuthRoute
+          path={"/email-sent"}
+          exact={true}
+          Component={() => <EmailSent />}
+        />
+        <AuthRoute
+          authBgA={true}
+          path={"/sign-in"}
+          exact={true}
+          Component={() => <SignIn />}
+        />
+        <AuthRoute
           path={"/forgot-password"}
           exact={true}
           Component={() => <ForgotPassword />}
         />
         <AuthRoute
-          path={"/verify-email"}
+          path={"/reset-password"}
           exact={true}
-          Component={() => <VerifyEmail/>}
+          Component={() => <ResetPassword />}
+        />
+        <AuthRoute
+          exact={true}
+          path={"/verify-email"}
+          Component={() => <VerifyEmail />}
         />
         <AuthRoute
           path={"/verify-phonenumber"}
           exact={true}
-          Component={() => <VerifyPhoneNumber/>}
+          Component={() => <VerifyPhoneNumber />}
         />
         <AuthRoute
           path={"/email-verification-success"}
           exact={true}
-          Component={() => <EmailVerificationSuccess/>}
+          Component={() => <EmailVerificationSuccess />}
         />
         <AuthRoute
           path={"/add-phonenumber"}
           exact={true}
-          Component={() => <AddPhoneNumber/>}
+          Component={() => <AddPhoneNumber />}
         />
         <AuthRoute
           path={"/phone-verification-success"}
           exact={true}
-          Component={() => <PhoneVerificationSuccess/>}
+          Component={() => <PhoneVerificationSuccess />}
         />
         <Route exact path="/components" render={() => <Components />} />
         <Route path="*" render={() => <Redirect to="/" />} />

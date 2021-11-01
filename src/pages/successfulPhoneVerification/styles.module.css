@@ -1,26 +1,31 @@
+.container {
+  display: flex;
+  height: 70vh;
+  align-items: center;
+}
+
 .bodyContent {
-    width: 550px;
-    margin: 0 auto;
+  width: 550px;
+  margin: 0 auto;
+}
+.successGif {
+  width: 10rem;
+  height: 10rem;
+}
+.container h2,
+.container p,
+.container label,
+.container small {
+  color: var(--app-dark-blue);
+}
+
+.container p,
+.container label {
+  font-size: 0.85rem;
+}
+@media screen and (max-width: 700px) {
+  .container .bodyContent {
+    width: 100%;
+    padding: 0 20px;
   }
-  .successGif{
-    width: 10rem;
-    height: 10rem;
-  }
-  .container h1,
-  .container p,
-  .container label,
-  .container small {
-    color: var(--app-dark-blue);
-  }
-  
-  .container p,
-  .container label {
-    font-size: 0.85rem;
-  }
-  @media screen and (max-width: 700px) {
-    .container form {
-      width: 100%;
-      padding: 0 20px;
-    }
-  }
-  
+}

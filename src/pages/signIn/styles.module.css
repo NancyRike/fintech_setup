@@ -1,0 +1,42 @@
+.formContainer {
+  background: #fff;
+  width: 600px;
+  border-radius: 19px;
+}
+
+.container form {
+  margin: 0 auto;
+}
+
+.container h2,
+.container p,
+.container label {
+  color: var(--app-dark-blue);
+}
+
+.container p,
+.container label,
+.container span {
+  font-size: 0.75rem;
+}
+
+.highlight {
+  color: var(--app-light-blue);
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 100px !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .formContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .formContainer {
+    background: none;
+  }
+}

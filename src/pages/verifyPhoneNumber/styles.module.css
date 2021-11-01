@@ -1,9 +1,15 @@
+.container {
+  display: flex;
+  height: 70vh;
+  align-items: center;
+}
+
 .container form {
   width: 600px;
   margin: 0 auto;
 }
 
-.container h1,
+.container h2,
 .container p,
 .container label,
 .container small {
@@ -14,11 +20,11 @@
 .container label {
   font-size: 0.85rem;
 }
-.container small{
-    font-size: 0.65rem;
+.container small {
+  font-size: 0.65rem;
 }
-.textHighlight{
-    cursor: pointer;
+.textHighlight {
+  cursor: pointer;
 }
 @media screen and (max-width: 700px) {
   .container form {
