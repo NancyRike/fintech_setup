@@ -1,6 +1,6 @@
 import { Formik } from "formik";
 import * as yup from "yup";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Inputs, Button, Loader } from "../../components";
 import { useHistory } from "react-router-dom";
 
