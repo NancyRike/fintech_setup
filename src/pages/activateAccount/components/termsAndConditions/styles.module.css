@@ -1,0 +1,9 @@
+.container > * {
+  margin: 25px 0px;
+}
+
+.container h2,
+.container h6 {
+  color: var(--app-dark-blue);
+  font-weight: 600;
+}

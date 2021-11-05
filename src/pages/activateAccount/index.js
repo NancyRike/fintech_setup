@@ -1,5 +1,6 @@
 import React from "react";
 import { logo, NavListIconComplete, NavListIconHalf } from "../../assets";
+import { TermsAndConditions } from "./components";
 
 import styles from "./styles.module.css";
 
@@ -61,7 +62,11 @@ const ActivateAccount = () => {
               </nav>
             </div>
           </div>
-          <div className={`${styles.main} col-9`}></div>
+          <div
+            className={`${styles.main} col-9 d-flex pt-3 pb-5 justify-content-center`}
+          >
+            <TermsAndConditions />
+          </div>
         </div>
       </div>
     </div>
