@@ -1,6 +1,6 @@
 import React from "react";
 import { emailSent } from "../../assets";
-import { Inputs, Button } from "../../components";
+import { Button } from "../../components";
 
 import styles from "./styles.module.css";
 

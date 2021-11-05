@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { logo, success } from "../../assets";
+import { success } from "../../assets";
 import { Button, Loader } from "../../components";
 
 import styles from "./styles.module.css";
