@@ -6,6 +6,8 @@ import { ReactComponent as ToggleOff } from "./off.svg";
 import { ReactComponent as ArrowDown } from "./arrowDown.svg";
 import { ReactComponent as EyeClose } from "./eyeClose.svg";
 import { ReactComponent as EyeOpen } from "./eyeOpen.svg";
+import { ReactComponent as NavListIconComplete } from "./activateAccountNavIcon.svg";
+import { ReactComponent as NavListIconHalf } from "./activateAccountNavIconHalf.svg";
 
 export {
   Clock,
@@ -16,4 +18,6 @@ export {
   ToggleOff,
   EyeClose,
   EyeOpen,
+  NavListIconComplete,
+  NavListIconHalf,
 };

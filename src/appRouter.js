@@ -21,6 +21,7 @@ import {
   PhoneVerificationSuccess,
   VerifyEmail,
   VerifyPhoneNumber,
+  ActivateAccount,
 } from "./pages";
 
 // Layout routes
@@ -104,6 +105,11 @@ const AppRouter = () => {
           path={"/phone-verification-success"}
           exact={true}
           Component={() => <PhoneVerificationSuccess />}
+        />
+        <Route
+          exact
+          path="/activate-account"
+          render={() => <ActivateAccount />}
         />
         <Route exact path="/components" render={() => <Components />} />
         <Route path="*" render={() => <Redirect to="/" />} />

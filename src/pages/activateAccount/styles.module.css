@@ -1,0 +1,32 @@
+.navbar {
+  background: var(--app-light-white);
+  height: 100vh;
+}
+
+.navbar ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navLink {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.navLink svg {
+  margin-right: 12px;
+  margin-top: 3px;
+}
+
+.navLink span {
+  font-size: 14px;
+  color: var(--app-light-blue);
+  cursor: pointer;
+}
+.navLink svg * {
+  stroke: var(--app-light-blue);
+}
+
+.main {
+  background: var(--app-light-bg);
+}
