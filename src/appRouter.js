@@ -7,7 +7,7 @@ import {
   Switch,
   useLocation,
 } from "react-router-dom";
-import { AuthLayout } from "./layouts";
+import { AuthLayout, DashboardLayout } from "./layouts";
 
 import {
   Components,
@@ -21,6 +21,7 @@ import {
   PhoneVerificationSuccess,
   VerifyEmail,
   VerifyPhoneNumber,
+  Dashboard,
 } from "./pages";
 
 // Layout routes
@@ -37,6 +38,19 @@ const AuthRoute = ({ Component, authBgA, ...rest }) => {
     />
   );
 };
+
+const DashboardRoute = ({Component, ...rest}) => {
+  return(
+    <Route 
+      {...rest}
+      render = {(props)=>(
+        <DashboardLayout>
+          <Component {...props} />
+        </DashboardLayout>
+      )}
+    />
+  )
+}
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -105,6 +119,11 @@ const AppRouter = () => {
           exact={true}
           Component={() => <PhoneVerificationSuccess />}
         />
+       <DashboardRoute
+       path={'/dashboard'}
+       exact={true}
+       Component={()=> <Dashboard/>}
+       />
         <Route exact path="/components" render={() => <Components />} />
         <Route path="*" render={() => <Redirect to="/" />} />
       </Switch>
