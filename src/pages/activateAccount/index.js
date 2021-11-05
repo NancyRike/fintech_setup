@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { logo, NavListIconComplete, NavListIconHalf } from "../../assets";
-import { TermsAndConditions } from "./components";
+import {
+  BankDetails,
+  BusinessLeadership,
+  BusinessOwnership,
+  CompanyInfo,
+  TermsAndConditions,
+} from "./components";
 
 import styles from "./styles.module.css";
 
 const ActivateAccount = () => {
+  const [currentNavItem, setCurrentNavItem] = useState(1);
+
   return (
     <div className={styles.container}>
       <div className="container-fluid">
@@ -19,43 +27,57 @@ const ActivateAccount = () => {
                   <li>
                     <div className={`${styles.navLink}`}>
                       <NavListIconComplete />
-                      <span>Company Info</span>
+                      <span onClick={() => setCurrentNavItem(1)}>
+                        Company Info
+                      </span>
                     </div>
                   </li>
                   <li>
                     <div className={`${styles.navLink}`}>
                       <NavListIconComplete />
-                      <span>Business Address</span>
+                      <span onClick={() => setCurrentNavItem(2)}>
+                        Business Address
+                      </span>
                     </div>
                   </li>
                   <li>
                     <div className={`${styles.navLink}`}>
                       <NavListIconComplete />
-                      <span>Business Leadership</span>
+                      <span onClick={() => setCurrentNavItem(3)}>
+                        Business Leadership
+                      </span>
                     </div>
                   </li>
                   <li>
                     <div className={`${styles.navLink}`}>
                       <NavListIconComplete />
-                      <span>Business Details</span>
+                      <span onClick={() => setCurrentNavItem(4)}>
+                        Business Details
+                      </span>
                     </div>
                   </li>
                   <li>
                     <div className={`${styles.navLink}`}>
                       <NavListIconComplete />
-                      <span>Business Ownership</span>
+                      <span onClick={() => setCurrentNavItem(5)}>
+                        Business Ownership
+                      </span>
                     </div>
                   </li>
                   <li>
                     <div className={`${styles.navLink}`}>
                       <NavListIconComplete />
-                      <span>Bank Connection</span>
+                      <span onClick={() => setCurrentNavItem(6)}>
+                        Bank Connection
+                      </span>
                     </div>
                   </li>
                   <li>
                     <div className={`${styles.navLink}`}>
                       <NavListIconHalf />
-                      <span>Terms &amp; Conditions</span>
+                      <span onClick={() => setCurrentNavItem(7)}>
+                        Terms &amp; Conditions
+                      </span>
                     </div>
                   </li>
                 </ul>
@@ -65,7 +87,23 @@ const ActivateAccount = () => {
           <div
             className={`${styles.main} col-9 d-flex pt-3 pb-5 justify-content-center`}
           >
-            <TermsAndConditions />
+            {currentNavItem === 1 ? (
+              <CompanyInfo />
+            ) : currentNavItem === 2 ? (
+              ""
+            ) : currentNavItem === 3 ? (
+              <BusinessLeadership />
+            ) : currentNavItem === 4 ? (
+              ""
+            ) : currentNavItem === 5 ? (
+              <BusinessOwnership />
+            ) : currentNavItem === 6 ? (
+              <BankDetails />
+            ) : currentNavItem === 7 ? (
+              <TermsAndConditions />
+            ) : (
+              <CompanyInfo />
+            )}
           </div>
         </div>
       </div>
