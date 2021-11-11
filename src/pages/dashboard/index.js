@@ -42,31 +42,31 @@ const Dashboard = () => {
     
   return (
     <main>
-      <section className={`${styles.c} container py-5`}>
+      <section className={`container-md py-3 py-sm-5 ${styles.containerBody}`}>
         <h2 className={`${styles.dashboardHeader}`}>Company Dashboard</h2>
         <div className={`${styles.c} row`}>
           <div className={`col-md-6 mb-4`}>
-            <div className={`${styles.activateAccountCard} row justify-content-between align-items-center p-3 mx-1 bg-white`}>
-              <div className={`${styles.textSection} col-7 `}>
+            <div className={`${styles.activateAccountCard} row justify-content-between align-items-center p-lg-3 p-2 mx-1 bg-white`}>
+              <div className={`${styles.textSection} col-sm-7 `}>
                   <div>
                     <h3>Welcome Olamide</h3>
                     <p>Please activate your account to access full Evea services</p>
                     <Link>Activate Account</Link> 
                   </div>
               </div>
-              <div className={`${styles.imageSection} col-5 `}>
-                <WelcomeImage/>
+              <div className={`${styles.imageSection} col-sm-5 `}>
+                <WelcomeImage className={`${styles.welcomeImage}`}/>
               </div>
             </div>
           </div>
           <div className="col-md-6">
           </div>
-          <div className={`${styles.c} col-md-6`}>
+          <div className={` col-md-6`}>
             <div className={`${styles.cardBody} p-4 `}>
               <div className="cardBody">
                 <h3 className={`${styles.creditInfo} mb-4`}>Credit Info</h3>
                 <h6 className={`${styles.creditLimit} `}>Credit Limit</h6>
-                <h2 className={`${styles.creditLimitAmount} `}>₦ 500,000</h2>
+                <h2 className={`${styles.creditLimitAmount} `}>-</h2>
                 <div
                   class="progress my-3"
                   style={{ width: "100%", backgroundColor: "#E3FCFB", height: "10px" }}
@@ -74,7 +74,7 @@ const Dashboard = () => {
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    style={{ width: "40%", backgroundColor: "#50B83C" }}
+                    style={{ width: "0%", backgroundColor: "#50B83C" }}
                     aria-valuenow="25"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -83,12 +83,12 @@ const Dashboard = () => {
                 <div className="d-sm-flex justify-content-between align-items-center">
                   <div className={`${styles.balance}`}>
                     <GreenCircle /> <span className="">Spent </span>
-                    <p>₦ 768,000</p>
+                    <p>-</p>
                   </div>
                   <div className={`${styles.balance}`}>
                     <span className="">Available</span>
                     <GreyCircle />
-                    <p>₦ 768,000</p>
+                    <p>-</p>
                   </div>
                 </div>
                 <div>
@@ -100,43 +100,43 @@ const Dashboard = () => {
             </div>
           </div>
           <div className={`${styles} col-md-6`}>
-            <div className={`${styles.paymentCard} px-4 py-3 mb-3`}>
+            <div className={`${styles.paymentCard} px-lg-4 px-2 py-3 mb-lg-3 mb-2`}>
               <span className="py-2">
-                <InfoIcon /> Upcoming payment due
+                <InfoIcon className={`${styles.infoIcon}`} /> Upcoming payment due
               </span>
               <div className="px-4">
                 <p>
-                  <b>₦426,500.00 </b> due by Fri, Nov 30, 2020
+                  <b> - </b> 
                 </p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <Link className={`${styles.requestLink}`}>Make Payment</Link>
-                  <Link className={`${styles.requestLink}`}>
+                <div className="d-lg-flex justify-content-between align-items-center">
+                  <Link className={`${styles.requestLink} d-block`}>Make Payment</Link>
+                  <Link className={`${styles.requestLink} d-block`}>
                     Change Payment Schedule
                   </Link>
                 </div>
               </div>
             </div>
             <div className={`${styles.cashbackCard} bg-white `}>
-              <div className="bg-whte pt-4 px-4 mt-3">
+              <div className="bg-whte pt-4 px-2 px-lg-4 mt-lg-3">
                 <div className= {`${styles.cashbackBalance} d-flex justify-content-between align-items-center `}  >
                   <div>
                     <span>
-                      Available cashback <InfoIcon />
+                      Available cashback <InfoIcon className={`${styles.infoIcon}`} />
                     </span>
-                    <h3>₦46,000.00</h3>
+                    <h3>-</h3>
                   </div>
                   <div>
                     <span>
-                      Cashback this month <InfoIcon />
+                      Cashback this month <InfoIcon className={`${styles.infoIcon}`} />
                     </span>
-                    <h3>N46,000.00</h3>
+                    <h3>-</h3>
                   </div>
                 </div>
                 <div className={`${styles.cashbackDetails} w-75 d-flex justify-content-between align-Items-center` }>
                   <p>
-                    Total cashback <InfoIcon />
+                    Total cashback <InfoIcon className={`${styles.infoIcon}`} />
                   </p>
-                  <h6>₦ 46,000</h6>
+                  <h6>-</h6>
                 </div>
               </div>
               <div className={`${styles.redeemBalance} d-flex justify-content-center`}>
@@ -147,12 +147,12 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="mt-5">
-              <div className={` ${styles.graphContainer} col-12 p-5 bg-white`}>
+              <div className={` ${styles.graphContainer} col-12 p-sm-5 p-2 bg-white`}>
                 <div className={` d-flex justify-content-between align-items-center `}>
                   <h2 className={`${styles.graphHeader}`}>Company Spend</h2>
                   <div>
-                    <Button outlineButton buttonStyling={'mx-2'} buttonLabel={<span>Nov <ArrowDown/></span>}/>
-                    <Button outlineButton buttonStyling={'mx-2'} buttonLabel={<span>2020 <ArrowDown/></span>}/>
+                    <Button outlineButton buttonStyling={`mx-2 ${styles.graphFilter}`} buttonLabel={<span>Nov <ArrowDown/></span>}/>
+                    <Button outlineButton buttonStyling={`mx-2 ${styles.graphFilter}`} buttonLabel={<span>2020 <ArrowDown/></span>}/>
                   </div>
                 </div>
                 <div>
