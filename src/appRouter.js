@@ -7,7 +7,7 @@ import {
   Switch,
   useLocation,
 } from "react-router-dom";
-import { AuthLayout } from "./layouts";
+import { AuthLayout, DashboardLayout } from "./layouts";
 
 import {
   Components,
@@ -22,6 +22,7 @@ import {
   VerifyEmail,
   VerifyPhoneNumber,
   ActivateAccount,
+  Dashboard,
 } from "./pages";
 
 // Layout routes
@@ -34,6 +35,19 @@ const AuthRoute = ({ Component, authBgA, ...rest }) => {
         <AuthLayout authBgA={authBgA}>
           <Component {...props} />
         </AuthLayout>
+      )}
+    />
+  );
+};
+
+const DashboardRoute = ({ Component, ...rest }) => {
+  return (
+    <Route
+      {...rest}
+      render={(props) => (
+        <DashboardLayout>
+          <Component {...props} />
+        </DashboardLayout>
       )}
     />
   );
@@ -110,6 +124,11 @@ const AppRouter = () => {
           exact
           path="/activate-account"
           render={() => <ActivateAccount />}
+        />
+        <DashboardRoute
+          path={"/dashboard"}
+          exact={true}
+          Component={() => <Dashboard />}
         />
         <Route exact path="/components" render={() => <Components />} />
         <Route path="*" render={() => <Redirect to="/" />} />

@@ -1,0 +1,150 @@
+.dashboardHeader{
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 40px;
+color: #0035A3;
+}
+.activateAccountCard{
+    border-radius: 12px;
+}
+.activateAccountCard h3{
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 30px;
+color: #00246F;
+}
+.activateAccountCard p{
+    font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+color: #2F3034;
+
+}
+.activateAccountCard a{
+    font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+text-decoration: none;
+color: #1A63FF;
+}
+.textSection, .imageSection{
+    padding: 0 !important;
+}
+
+.cardBody{
+    background: #FFFFFF;
+    /* border: 1px solid #DDE8FE; */
+    box-sizing: border-box;
+    box-shadow: 0px 5px 20px rgba(219, 219, 219, 0.25);
+    border-radius: 16px;    
+}
+.creditInfo{
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 30px;
+color: #00246F;
+
+}
+.creditLimit{
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+color: #00246F;
+}
+.creditLimitAmount{
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 40px;
+color: #2F3034;
+}
+.balance span{
+    font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+color: #4E6FB6;
+margin: auto 7px;
+}
+.balance p{
+    font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+color: #2F3034;
+}
+.requestLink{
+    text-decoration: none;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+color: #1A63FF;
+}
+.paymentCard{
+    background: #E5ECFB;
+border-radius: 8px;
+}
+.paymentCard span{
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+color: #2F3034;
+}
+.cashbackCard{
+    border-radius: 8px;
+}
+.cashbackBalance span, 
+.cashbackDetails p{
+    font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+color: #4E6FB6;
+
+}
+.cashbackBalance h3{
+    font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 30px;
+color: #00246F;
+}
+.cashbackDetails h6{
+    font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+text-align: right;
+color: #00246F;
+
+}
+.redeemBalance{
+    width: 100%;
+    background-color: #E5ECFB;
+}
+.redeemBalance span{
+    font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+color: #172B4D;
+}
+.graphContainer{
+    border-radius: 12px;
+}
+.graphHeader{
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 30px;
+color: #0035A3;
+
+}

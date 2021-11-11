@@ -10,3 +10,4 @@ export * from "./successfulEmailVerification";
 export * from "./addPhoneNumber";
 export * from "./successfulPhoneVerification";
 export * from "./activateAccount";
+export * from "./dashboard";

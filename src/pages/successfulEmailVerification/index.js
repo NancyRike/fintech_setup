@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
-import { logo, success } from "../../assets";
+import { success } from "../../assets";
 import { Button, Loader } from "../../components";
 
 import styles from "./styles.module.css";

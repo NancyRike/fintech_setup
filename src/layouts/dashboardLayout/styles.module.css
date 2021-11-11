@@ -1,0 +1,31 @@
+.sideBarContainer{
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.sideBarList li{
+    padding: 10px 1px;
+    
+}
+.sideBarList a :active{
+    color: #0035A3;
+}
+.sideBarList a{
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20.11px;
+    color: rgba(0, 0, 0, 1);
+}
+.DashboardChild{
+    background-color: #E5E5E5;
+}
+
+/* mobile Screen */
+@media screen and (max-width: 768px) {
+    
+}
