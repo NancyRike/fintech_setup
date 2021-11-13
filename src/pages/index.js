@@ -11,3 +11,4 @@ export * from "./addPhoneNumber";
 export * from "./successfulPhoneVerification";
 export * from "./activateAccount";
 export * from "./dashboard";
+export * from "./getStarted";

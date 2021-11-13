@@ -16,6 +16,9 @@ import { ReactComponent as PowerIcon } from "./getting started.svg";
 import { ReactComponent as HomeIcon } from "./home.svg";
 import { ReactComponent as CardIcon } from "./credit-card.svg";
 import { ReactComponent as WelcomeImage } from "./welcomeImage.svg";
+import { ReactComponent as TimeClock } from "./timeClock.svg";
+import { ReactComponent as Close } from "./close.svg";
+import { ReactComponent as Hamburger } from "./hamburger.svg";
 
 export {
   Clock,
@@ -36,4 +39,7 @@ export {
   HomeIcon,
   CardIcon,
   WelcomeImage,
+  TimeClock,
+  Close,
+  Hamburger,
 };

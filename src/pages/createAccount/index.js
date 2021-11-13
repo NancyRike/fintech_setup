@@ -38,7 +38,13 @@ const CreateAccount = () => {
                   <h2 className="fw-bold">Create Your Evea Account</h2>
                   <p>
                     What do I need to{" "}
-                    <span className={`${styles.highlight}`}>get started</span>?
+                    <span
+                      className={`${styles.highlight}`}
+                      onClick={() => history.push("/get-started")}
+                    >
+                      get started
+                    </span>
+                    ?
                   </p>
                   <div className="mt-5">
                     <div>
