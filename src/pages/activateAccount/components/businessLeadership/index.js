@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Info } from "../../../../assets";
 import {
   Inputs,
@@ -6,11 +6,14 @@ import {
   RadioButton,
   Dropdown,
   FIleUpload,
+  Checkbox,
 } from "../../../../components";
 
 import styles from "./styles.module.css";
 
 const BusinessLeadership = () => {
+  const [controllingOfficer, setControllingOfficer] = useState(false);
+
   return (
     <div className={`${styles.container}`}>
       <h2>Business Leadership</h2>
@@ -23,56 +26,64 @@ const BusinessLeadership = () => {
           <label htmlFor="" className="mb-3">
             Are you a controlling officer at your company?
           </label>
-          <RadioButton label="Yes, I am a controlling officer" />
+          <Checkbox
+            label="Yes, I am a controlling officer"
+            value={controllingOfficer}
+            onChange={() => setControllingOfficer(!controllingOfficer)}
+          />
         </div>
-        <div>
-          <h6>Controlling officer information</h6>
-          <p>
-            Federal law requires us to collect information for a controlling
-            officer in your company.
-          </p>
-          <span className="d-block mb-4">
-            <label htmlFor="">Job Title</label>
-            <Dropdown
-              placeHolder="Select item"
-              items={[
-                "Chief Executive Officer (CEO)",
-                "Chief Financial Officer (CFO)",
-                "Founder / Co-Founder",
-                "Chief Operating Officer (COO)",
-                "Other",
-              ]}
-            />
-          </span>
-          <span className="d-block mb-4">
-            <label htmlFor="">Phone Number</label>
-            <Inputs borderLess />
-          </span>
-          <span className="d-block mb-4">
-            <label htmlFor="">ID Type</label>
-            <Dropdown
-              placeHolder="Select item"
-              items={[
-                "National Identification (NIMC)",
-                "Drivers License",
-                "International Passport",
-                "Voter's Card",
-              ]}
-            />
-          </span>
-          <span className="d-block mb-4">
-            <label htmlFor="">ID Number</label>
-            <Inputs borderLess />
-          </span>
-          <div className="mb-4">
-            <label htmlFor="">Upload valid ID of controlling officer</label>
-            <FIleUpload />
+        {controllingOfficer ? (
+          <div>
+            <h6>Controlling officer information</h6>
+            <p>
+              Federal law requires us to collect information for a controlling
+              officer in your company.
+            </p>
+            <span className="d-block mb-4">
+              <label htmlFor="">Job Title</label>
+              <Dropdown
+                placeHolder="Select item"
+                items={[
+                  "Chief Executive Officer (CEO)",
+                  "Chief Financial Officer (CFO)",
+                  "Founder / Co-Founder",
+                  "Chief Operating Officer (COO)",
+                  "Other",
+                ]}
+              />
+            </span>
+            <span className="d-block mb-4">
+              <label htmlFor="">Phone Number</label>
+              <Inputs borderLess />
+            </span>
+            <span className="d-block mb-4">
+              <label htmlFor="">ID Type</label>
+              <Dropdown
+                placeHolder="Select item"
+                items={[
+                  "National Identification (NIMC)",
+                  "Drivers License",
+                  "International Passport",
+                  "Voter's Card",
+                ]}
+              />
+            </span>
+            <span className="d-block mb-4">
+              <label htmlFor="">ID Number</label>
+              <Inputs borderLess />
+            </span>
+            <div className="mb-4">
+              <label htmlFor="">Upload valid ID of controlling officer</label>
+              <FIleUpload />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="">Upload company ID of controlling officer</label>
+              <FIleUpload />
+            </div>
           </div>
-          <div className="mb-4">
-            <label htmlFor="">Upload company ID of controlling officer</label>
-            <FIleUpload />
-          </div>
-        </div>
+        ) : (
+          ""
+        )}
         <div className="d-flex flex-wrap justify-content-between">
           <Button buttonLabel="Previous" outlineButton />
           <Button buttonLabel="Submit" />
