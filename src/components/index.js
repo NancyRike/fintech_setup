@@ -8,3 +8,4 @@ export * from "./validationMessage";
 export * from "./creditCard";
 export * from "./toggleButton";
 export * from "./dropdown";
+export * from "./fileUpload";

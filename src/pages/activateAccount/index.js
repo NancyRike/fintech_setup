@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { logo, NavListIconComplete, NavListIconHalf } from "../../assets";
 import {
   BankDetails,
+  BusinessAddress,
   BusinessLeadership,
   BusinessOwnership,
   CompanyInfo,
@@ -90,7 +91,7 @@ const ActivateAccount = () => {
             {currentNavItem === 1 ? (
               <CompanyInfo />
             ) : currentNavItem === 2 ? (
-              ""
+              <BusinessAddress />
             ) : currentNavItem === 3 ? (
               <BusinessLeadership />
             ) : currentNavItem === 4 ? (
