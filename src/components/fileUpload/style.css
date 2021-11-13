@@ -45,6 +45,10 @@
   margin-left: 10px;
 }
 
+.file-upload-close * {
+  stroke: var(--app-dark-blue);
+}
+
 .upload_error {
   border: 2px dashed red;
 }

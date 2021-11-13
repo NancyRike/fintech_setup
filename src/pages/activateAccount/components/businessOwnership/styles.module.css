@@ -17,3 +17,11 @@
 .container label span {
   font-size: 12px;
 }
+
+.add-another {
+  color: #1a63ff !important;
+}
+
+.add-another span {
+  cursor: pointer;
+}

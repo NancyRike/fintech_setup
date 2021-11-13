@@ -3,6 +3,7 @@ import { logo, NavListIconComplete, NavListIconHalf } from "../../assets";
 import {
   BankDetails,
   BusinessAddress,
+  BusinessDetails,
   BusinessLeadership,
   BusinessOwnership,
   CompanyInfo,
@@ -26,7 +27,11 @@ const ActivateAccount = () => {
               <nav>
                 <ul>
                   <li>
-                    <div className={`${styles.navLink}`}>
+                    <div
+                      className={`${styles.navLink} ${
+                        currentNavItem === 1 ? styles.activenav : ""
+                      }`}
+                    >
                       <NavListIconComplete />
                       <span onClick={() => setCurrentNavItem(1)}>
                         Company Info
@@ -34,7 +39,11 @@ const ActivateAccount = () => {
                     </div>
                   </li>
                   <li>
-                    <div className={`${styles.navLink}`}>
+                    <div
+                      className={`${styles.navLink} ${
+                        currentNavItem === 2 ? styles.activenav : ""
+                      }`}
+                    >
                       <NavListIconComplete />
                       <span onClick={() => setCurrentNavItem(2)}>
                         Business Address
@@ -42,7 +51,11 @@ const ActivateAccount = () => {
                     </div>
                   </li>
                   <li>
-                    <div className={`${styles.navLink}`}>
+                    <div
+                      className={`${styles.navLink} ${
+                        currentNavItem === 3 ? styles.activenav : ""
+                      }`}
+                    >
                       <NavListIconComplete />
                       <span onClick={() => setCurrentNavItem(3)}>
                         Business Leadership
@@ -50,7 +63,11 @@ const ActivateAccount = () => {
                     </div>
                   </li>
                   <li>
-                    <div className={`${styles.navLink}`}>
+                    <div
+                      className={`${styles.navLink} ${
+                        currentNavItem === 4 ? styles.activenav : ""
+                      }`}
+                    >
                       <NavListIconComplete />
                       <span onClick={() => setCurrentNavItem(4)}>
                         Business Details
@@ -58,7 +75,11 @@ const ActivateAccount = () => {
                     </div>
                   </li>
                   <li>
-                    <div className={`${styles.navLink}`}>
+                    <div
+                      className={`${styles.navLink} ${
+                        currentNavItem === 5 ? styles.activenav : ""
+                      }`}
+                    >
                       <NavListIconComplete />
                       <span onClick={() => setCurrentNavItem(5)}>
                         Business Ownership
@@ -66,7 +87,11 @@ const ActivateAccount = () => {
                     </div>
                   </li>
                   <li>
-                    <div className={`${styles.navLink}`}>
+                    <div
+                      className={`${styles.navLink} ${
+                        currentNavItem === 6 ? styles.activenav : ""
+                      }`}
+                    >
                       <NavListIconComplete />
                       <span onClick={() => setCurrentNavItem(6)}>
                         Bank Connection
@@ -74,7 +99,11 @@ const ActivateAccount = () => {
                     </div>
                   </li>
                   <li>
-                    <div className={`${styles.navLink}`}>
+                    <div
+                      className={`${styles.navLink} ${
+                        currentNavItem === 7 ? styles.activenav : ""
+                      }`}
+                    >
                       <NavListIconHalf />
                       <span onClick={() => setCurrentNavItem(7)}>
                         Terms &amp; Conditions
@@ -89,21 +118,21 @@ const ActivateAccount = () => {
             className={`${styles.main} col-9 d-flex pt-3 pb-5 justify-content-center`}
           >
             {currentNavItem === 1 ? (
-              <CompanyInfo />
+              <CompanyInfo setCurrentNavItem={setCurrentNavItem} />
             ) : currentNavItem === 2 ? (
-              <BusinessAddress />
+              <BusinessAddress setCurrentNavItem={setCurrentNavItem} />
             ) : currentNavItem === 3 ? (
-              <BusinessLeadership />
+              <BusinessLeadership setCurrentNavItem={setCurrentNavItem} />
             ) : currentNavItem === 4 ? (
-              ""
+              <BusinessDetails setCurrentNavItem={setCurrentNavItem} />
             ) : currentNavItem === 5 ? (
-              <BusinessOwnership />
+              <BusinessOwnership setCurrentNavItem={setCurrentNavItem} />
             ) : currentNavItem === 6 ? (
-              <BankDetails />
+              <BankDetails setCurrentNavItem={setCurrentNavItem} />
             ) : currentNavItem === 7 ? (
-              <TermsAndConditions />
+              <TermsAndConditions setCurrentNavItem={setCurrentNavItem} />
             ) : (
-              <CompanyInfo />
+              <CompanyInfo setCurrentNavItem={setCurrentNavItem} />
             )}
           </div>
         </div>

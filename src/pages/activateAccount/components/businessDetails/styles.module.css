@@ -8,8 +8,12 @@
   font-weight: 600;
 }
 
-.container p,
-.container label {
-  color: var(--app-dark-blue);
+.container label,
+.container p {
   font-size: 14px;
+  color: var(--app-dark-blue);
+}
+
+.container label span {
+  font-size: 12px;
 }

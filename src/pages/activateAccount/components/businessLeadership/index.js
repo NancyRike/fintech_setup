@@ -11,9 +11,24 @@ import {
 
 import styles from "./styles.module.css";
 
-const BusinessLeadership = () => {
+const BusinessLeadership = ({ setCurrentNavItem }) => {
   const [controllingOfficer, setControllingOfficer] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setCurrentNavItem((currentNavItem) => {
+      return currentNavItem + 1;
+    });
+  };
+
+  const handlePrevious = (e) => {
+    e.preventDefault();
+
+    setCurrentNavItem((currentNavItem) => {
+      return currentNavItem - 1;
+    });
+  };
   return (
     <div className={`${styles.container}`}>
       <h2>Business Leadership</h2>
@@ -85,8 +100,12 @@ const BusinessLeadership = () => {
           ""
         )}
         <div className="d-flex flex-wrap justify-content-between">
-          <Button buttonLabel="Previous" outlineButton />
-          <Button buttonLabel="Submit" />
+          <Button
+            buttonLabel="Previous"
+            outlineButton
+            onClick={handlePrevious}
+          />
+          <Button buttonLabel="Submit" onClick={handleSubmit} />
         </div>
       </form>
     </div>

@@ -23,8 +23,17 @@
   color: var(--app-light-blue);
   cursor: pointer;
 }
+
 .navLink svg * {
   stroke: var(--app-light-blue);
+}
+
+.activenav {
+  font-weight: 700;
+}
+
+.activenav circle {
+  stroke-width: 3px;
 }
 
 .main {

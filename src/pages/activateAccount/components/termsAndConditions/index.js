@@ -1,8 +1,24 @@
 import React from "react";
+import { useHistory } from "react-router";
 import { Checkbox, Button } from "../../../../components";
 import styles from "./styles.module.css";
 
-const TermsAndConditions = () => {
+const TermsAndConditions = ({ setCurrentNavItem }) => {
+  const history = useHistory();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    history.push("/dashboard");
+  };
+
+  const handlePrevious = (e) => {
+    e.preventDefault();
+
+    setCurrentNavItem((currentNavItem) => {
+      return currentNavItem - 1;
+    });
+  };
+
   return (
     <div className={`${styles.container}`}>
       <h2>Terms &amp; Conditions</h2>
@@ -25,8 +41,8 @@ const TermsAndConditions = () => {
         <Checkbox label="I accept to let Evea to access my bank financial details and use my bank financial data for underwriting" />
       </div>
       <div className="d-flex flex-wrap justify-content-between">
-        <Button buttonLabel="Previous" outlineButton />
-        <Button buttonLabel="Accept" />
+        <Button buttonLabel="Previous" outlineButton onClick={handlePrevious} />
+        <Button buttonLabel="Accept" onClick={handleSubmit} />
       </div>
     </div>
   );

@@ -3,7 +3,22 @@ import { Inputs, Button, Dropdown, FIleUpload } from "../../../../components";
 
 import styles from "./styles.module.css";
 
-const BusinessAddress = () => {
+const BusinessAddress = ({ setCurrentNavItem }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setCurrentNavItem((currentNavItem) => {
+      return currentNavItem + 1;
+    });
+  };
+
+  const handlePrevious = (e) => {
+    e.preventDefault();
+
+    setCurrentNavItem((currentNavItem) => {
+      return currentNavItem - 1;
+    });
+  };
   return (
     <div className={`${styles.container}`}>
       <h2>Business Address</h2>
@@ -51,8 +66,12 @@ const BusinessAddress = () => {
           </div>
         </div>
         <div className="d-flex flex-wrap justify-content-between mt-3">
-          <Button buttonLabel="Previous" outlineButton />
-          <Button buttonLabel="Submit" />
+          <Button
+            buttonLabel="Previous"
+            outlineButton
+            onClick={handlePrevious}
+          />
+          <Button buttonLabel="Submit" onClick={handleSubmit} />
         </div>
       </form>
     </div>

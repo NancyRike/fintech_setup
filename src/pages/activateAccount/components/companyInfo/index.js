@@ -3,7 +3,15 @@ import { Inputs, Button, Dropdown } from "../../../../components";
 
 import styles from "./styles.module.css";
 
-const CompanyInfo = () => {
+const CompanyInfo = ({ setCurrentNavItem }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setCurrentNavItem((currentNavItem) => {
+      return currentNavItem + 1;
+    });
+  };
+
   return (
     <div className={`${styles.container}`}>
       <h2>Company Info</h2>
@@ -43,7 +51,7 @@ const CompanyInfo = () => {
           </span>
         </div>
         <div className="d-flex flex-wrap justify-content-end">
-          <Button buttonLabel="Submit" />
+          <Button buttonLabel="Submit" onClick={handleSubmit} />
         </div>
       </form>
     </div>
