@@ -17,3 +17,15 @@
 .container label span {
   font-size: 12px;
 }
+
+.info {
+  background: #e5ecfb;
+  color: #1a63ff;
+  font-size: 14px;
+}
+
+.info svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}

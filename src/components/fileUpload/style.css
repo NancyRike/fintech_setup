@@ -51,9 +51,10 @@
 
 .upload_file_info {
   display: inline-block;
-  background: #f4f5f7;
+  background: #e5ecfb;
   border-radius: 4px;
-  font-weight: 100 !important;
+  color: #1a63ff;
+  font-size: 14px;
 }
 
 .upload_file_info span {

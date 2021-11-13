@@ -47,7 +47,7 @@ const BusinessAddress = () => {
             <label htmlFor="">
               Upload Utility Bill of The Business Enterprise
             </label>
-            <FIleUpload onChange={(e) => e.target.files[0]} />
+            <FIleUpload />
           </div>
         </div>
         <div className="d-flex flex-wrap justify-content-between mt-3">

@@ -25,7 +25,12 @@ const FIleUpload = ({ className, name, onChange, errorText }) => {
             <p>Size limit: 5MB (Jpg or Png)</p>
           </div>
           <div>
-            <input type="file" onChange={handleChange} name={name} />
+            <input
+              type="file"
+              onChange={handleChange}
+              name={name}
+              accept="image/png, image/jpeg, image/jpg"
+            />
           </div>
         </div>
       ) : (

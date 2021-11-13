@@ -19,6 +19,7 @@ import { ReactComponent as WelcomeImage } from "./welcomeImage.svg";
 import { ReactComponent as TimeClock } from "./timeClock.svg";
 import { ReactComponent as Close } from "./close.svg";
 import { ReactComponent as Hamburger } from "./hamburger.svg";
+import { ReactComponent as Info } from "./info.svg";
 
 export {
   Clock,
@@ -42,4 +43,5 @@ export {
   TimeClock,
   Close,
   Hamburger,
+  Info,
 };
