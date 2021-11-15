@@ -1,7 +1,7 @@
 import React from "react";
 import { Doughnut, Line } from "react-chartjs-2";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ExportIcon, SearchIcon, SettingsIcon } from "../../assets";
+import { ArrowLeft, ExportIcon, SettingsIcon } from "../../assets";
 import styles from "./styles.module.css";
 
 const Transactions = () => {
@@ -187,7 +187,7 @@ const Transactions = () => {
           </div>
         </div>
         <div>
-        <table className={`table tabe-responsive ${tableContainer}`}>
+        <table className={`table tabe-responsive ${styles.tableContainer}`}>
             <thead>
               <tr>
                 <th> Date </th>

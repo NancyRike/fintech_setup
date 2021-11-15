@@ -9,7 +9,6 @@ const DashboardLayout = ({ children }) => {
   const showSideBar = () =>{
     setOpenNav(!openNav)
   }
-  console.log(openNav, "hereee");
   return (
     <>
     

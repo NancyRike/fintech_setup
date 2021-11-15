@@ -9,4 +9,5 @@ export * from "./verifyPhoneNumber";
 export * from "./successfulEmailVerification";
 export * from "./addPhoneNumber";
 export * from "./successfulPhoneVerification";
-export * from "./dashboard"
+export * from "./dashboard";
+export * from "./transactions";

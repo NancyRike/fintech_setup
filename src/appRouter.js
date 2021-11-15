@@ -22,6 +22,7 @@ import {
   VerifyEmail,
   VerifyPhoneNumber,
   Dashboard,
+  Transactions,
 } from "./pages";
 
 // Layout routes
@@ -123,6 +124,11 @@ const AppRouter = () => {
        path={'/dashboard'}
        exact={true}
        Component={()=> <Dashboard/>}
+       />
+       <DashboardRoute
+       path={'/transactions'}
+       exact={true}
+       Component={()=> <Transactions/>}
        />
         <Route exact path="/components" render={() => <Components />} />
         <Route path="*" render={() => <Redirect to="/" />} />

@@ -14,7 +14,12 @@ import { ReactComponent as PowerIcon } from "./getting started.svg";
 import { ReactComponent as HomeIcon } from "./home.svg";
 import { ReactComponent as CardIcon } from "./credit-card.svg";
 import { ReactComponent as WelcomeImage } from "./welcomeImage.svg";
-
+import {ReactComponent as SettingsIcon} from './settings.svg';
+import { ReactComponent as ArrowLeft } from "./arrow-left-circle.svg";
+import { ReactComponent as ExportIcon } from "./External Link.svg";
+import {ReactComponent as SearchIcon} from "./search.svg";
+import {ReactComponent as FilterIcon } from "./filter.svg";
+import {ReactComponent as CancelIcon} from "./cancel.svg"
 export {
   Clock,
   UploadCloud,
@@ -32,4 +37,10 @@ export {
   HomeIcon,
   CardIcon,
   WelcomeImage,
+  SettingsIcon,
+  ArrowLeft,
+  ExportIcon,
+  SearchIcon,
+  FilterIcon,
+  CancelIcon,
 };
