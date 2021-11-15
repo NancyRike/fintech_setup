@@ -133,7 +133,7 @@ const AppRouter = () => {
         />
         <Route exact path="/get-started" render={() => <GetStarted />} />
         <Route exact path="/components" render={() => <Components />} />
-        <Route path="*" render={() => <Redirect to="/" />} />
+        <Route path="*" render={() => <Redirect to="/dashboard" />} />
       </Switch>
     </Router>
   );

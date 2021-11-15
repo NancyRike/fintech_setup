@@ -1,0 +1,58 @@
+.container {
+  background: #fff;
+  border-radius: 16px;
+  width: 450px;
+}
+
+.container * {
+  font-size: 0.875rem !important;
+}
+
+.container label {
+  color: var(--app-dark-blue) !important;
+}
+
+.container h1 {
+  color: var(--app-dark-blue);
+  font-size: 1.5rem !important;
+  font-weight: 600;
+}
+
+.header {
+  position: relative;
+  border-bottom: 2px solid #e5ecfb;
+}
+
+.header svg {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.header svg * {
+  stroke: var(--app-dark-blue);
+}
+
+.tabs {
+  font-weight: 500;
+}
+
+.tabs div {
+  color: var(--app-dark-blue);
+  opacity: 20%;
+  cursor: pointer;
+}
+
+.active {
+  opacity: 100% !important;
+  box-shadow: 0 4px 4px -6px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}

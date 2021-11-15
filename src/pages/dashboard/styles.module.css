@@ -86,7 +86,8 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #1a63ff;
+  color: #1a63ff !important;
+  cursor: pointer;
 }
 .paymentCard {
   background: #e5ecfb;
@@ -99,12 +100,12 @@
   line-height: 150%;
   color: #2f3034;
 }
-.paymentCard p{
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 150%;
-color: #2F3034;
+.paymentCard p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2f3034;
 }
 .cashbackCard {
   border-radius: 8px;
@@ -154,11 +155,11 @@ color: #2F3034;
   line-height: 30px;
   color: #0035a3;
 }
-.graphFilter{
-    padding: 6px 15px;
+.graphFilter {
+  padding: 6px 15px;
 }
-.infoIcon{
-    width: 15px;
+.infoIcon {
+  width: 15px;
 }
 
 /* media queries for smaller screen sizes */
@@ -171,18 +172,16 @@ color: #2F3034;
     font-size: 14px;
     line-height: 22px;
   }
-  
 }
 @media screen and (max-width: 1060px) {
   .activateAccountCard h3 {
     font-size: 22px;
     line-height: 30px;
   }
-  .activateAccountCard p{
-font-size: 14px;
-line-height: 20px;
-
-}
+  .activateAccountCard p {
+    font-size: 14px;
+    line-height: 20px;
+  }
   .welcomeImage {
     width: 150px;
   }
@@ -190,56 +189,54 @@ line-height: 20px;
     font-size: 13px;
     line-height: 22px;
   }
-  .paymentCard p{
+  .paymentCard p {
     font-weight: 600;
     font-size: 15px;
   }
-  
 }
 @media screen and (max-width: 991px) {
-    .paymentCard p{
-      font-weight: 600;
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
-    .cashbackBalance span{
-  font-size: 12px;
-  line-height: 20px;
+  .paymentCard p {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .cashbackBalance span {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
-}
-@media screen and (max-width: 991px) and (min-width:768px){
-    .welcomeImage{
-         width: 130px;
-    }
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .welcomeImage {
+    width: 130px;
+  }
 
-    .activateAccountCard p {
-        font-size: 13px;
-        line-height: 18px;
-    }
+  .activateAccountCard p {
+    font-size: 13px;
+    line-height: 18px;
+  }
 }
-@media screen and (max-width: 891px) and (min-width:768px){
-    .welcomeImage{
-        width: 112px;
-    }
+@media screen and (max-width: 891px) and (min-width: 768px) {
+  .welcomeImage {
+    width: 112px;
+  }
 }
 @media screen and (max-width: 768px) {
-    .cardBody{
-        margin-bottom: 10px;
-    }
+  .cardBody {
+    margin-bottom: 10px;
+  }
 }
-@media screen and (max-width: 445px){
-    .containerBody{
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-    .graphHeader{
-        font-size: 21px;
-  line-height: 30px;
-    }
-    .graphFilter{
-        padding: 3px 10px;
-    }
+@media screen and (max-width: 445px) {
+  .containerBody {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .graphHeader {
+    font-size: 21px;
+    line-height: 30px;
+  }
+  .graphFilter {
+    padding: 3px 10px;
+  }
 }
-@media screen and (max-width: 445px){
-
+@media screen and (max-width: 445px) {
 }
