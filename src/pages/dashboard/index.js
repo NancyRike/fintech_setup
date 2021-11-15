@@ -1,11 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import { ArrowDown, ArrowRight, GreenCircle, GreyCircle, InfoIcon, WelcomeImage } from "../../assets";
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 import { Line } from "react-chartjs-2";
-import { Button } from "../../components";
+import { Button, Modal } from "../../components";
+import { RequestCreditIncrease } from "./components/requestCreditIncrease";
 
 const Dashboard = () => {
+  const [displayModal, setDisplayModal] = useState({
+    details: "",
+    visibility: false,
+  });
+  const handleModal = () => {
+    setDisplayModal({
+      visibility: true,
+    });
+  };
+
   const data = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"],
     datasets: [
@@ -42,6 +53,11 @@ const Dashboard = () => {
     
   return (
     <main>
+      {displayModal.visibility ? (
+        <Modal modalWidth={'25rem'}>
+          <RequestCreditIncrease setDisplayModal={setDisplayModal} />
+        </Modal>
+      ) : null}
       <section className={`container-md py-3 py-sm-5 ${styles.containerBody}`}>
         <h2 className={`${styles.dashboardHeader}`}>Company Dashboard</h2>
         <div className={`${styles.c} row`}>
@@ -51,7 +67,7 @@ const Dashboard = () => {
                   <div>
                     <h3>Welcome Olamide</h3>
                     <p>Please activate your account to access full Evea services</p>
-                    <Link>Activate Account</Link> 
+                    <Link >Activate Account</Link> 
                   </div>
               </div>
               <div className={`${styles.imageSection} col-sm-5 `}>
@@ -92,7 +108,7 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div>
-                  <Link className={`${styles.requestLink}`}>
+                  <Link to="#" className={`${styles.requestLink}`} onClick={handleModal}>
                     Request Credit Increase
                   </Link>
                 </div>

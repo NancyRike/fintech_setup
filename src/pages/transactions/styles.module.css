@@ -1,0 +1,121 @@
+.transactionHeader svg, .settingsButton svg, .exportTransaction svg{
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.transactionHeader span{
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  color: #091e42;
+}
+.settingsButton button{
+  text-decoration: none !important;
+  font-family: 'Open Sans';
+  font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+text-decoration: none !important;
+color: #0447F1;
+}
+.transactionList a{
+  font-family: 'Source Sans Pro';
+  text-decoration: none;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+display: flex;
+align-items: center;
+color: #0447F1;
+border-bottom: 3px solid #0447F1;;
+display: inline-block;
+}
+.exportTransaction{
+  margin-top: 6px ;
+  font-family: 'Source Sans Pro';
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 25px;
+color: #0447F1;
+
+}
+
+.exportTransaction a{
+  text-decoration: none;
+  margin-right: 7px;
+}
+.graphContainer{
+  /* height: 20em; */
+}
+.graphCard > div{
+  border-radius: 16px;
+  border: 1px solid #DDE8FE;
+  box-shadow: 0px 2.64128px 10.5651px rgba(219, 219, 219, 0.25);
+
+}
+.dateOptions h4{
+  font-family: 'Source Sans Pro';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 30px;
+color: #0035A3;
+
+}
+.dateOptions span{
+  font-family: 'Source Sans Pro';
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 20px;
+color: #2F3034;
+margin-left: 6px;
+margin-right: 6px;
+cursor: pointer;
+}
+.dateOptions span:active{
+  color: #0447F1;
+}
+.dateOptions a{
+  text-decoration: none;
+}
+.searchTransactions{
+  border: none;
+  padding: 5px;
+  border-radius: 14px;
+  background: #F4F5F7;
+  border: 0.668571px solid #E5ECFB;
+  box-sizing: border-box;
+  border-radius: 66.8571px;
+  
+}
+.searchTransactions ::placeholder{
+  font-family: 'Open Sans';
+font-style: normal;
+font-weight: normal;
+font-size: 9.36px !important;
+line-height: 13px;
+color: #4E6FB6 !important;
+
+}
+.searchTransactions :focus-visible{
+  border: none;
+}
+.searchTransactions :focus ::placeholder{
+  color: #4E6FB6 !important;
+}
+.tableRow{
+  border-radius: 16px;
+  border-bottom: 2px solid #DDE8FE;
+  box-shadow: 0px 2.64128px 10.5651px rgba(219, 219, 219, 0.25) !important;
+}
+.tableContainer thead{
+  
+}

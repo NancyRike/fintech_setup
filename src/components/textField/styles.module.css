@@ -1,0 +1,29 @@
+.textFieldStyle{
+    padding: 9.5px 12px;
+    border: none;
+    /* border-right: none;
+    border-left: none; */
+    border-bottom: 1px solid var(--app-dark-blue);
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  background: #ffffff;
+  color: #253858;
+  min-height: 84px;
+}
+
+.textFieldStyle:hover {
+  box-shadow: 0px 4px rgba(50, 50, 71, 0.06);
+}
+.textFieldStyle::placeholder{
+  color: #000;
+  font-size: 14px;
+}
+.textFieldStyle:focus-within{
+    box-shadow: 0px 4px rgba(50, 50, 71, 0.06);
+}
+.textFieldStyle:focus{
+  border:none;
+}
