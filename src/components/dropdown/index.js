@@ -33,7 +33,7 @@ const Dropdown = ({ placeHolder, items }) => {
         </div>
       </div>
       {showList ? (
-        <div className={`${styles.list} mt-3 p-3`}>
+        <div className={`${styles.list} mt-1 p-3`}>
           <ul>
             {items
               ? items.map((item, index) => (

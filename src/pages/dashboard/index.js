@@ -11,7 +11,11 @@ import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 import { Line } from "react-chartjs-2";
 import { Button, Inputs, Modal } from "../../components";
-import { PaymentScheduleModal, RequestCreditIncrease } from "./components";
+import {
+  MakePaymentModal,
+  PaymentScheduleModal,
+  RequestCreditIncrease,
+} from "./components";
 
 const data = {
   labels: [
@@ -72,6 +76,7 @@ const Dashboard = () => {
       visibility: true,
     });
   };
+  const [showMakePaymentModal, setShowMakePaymentModal] = useState(false);
 
   return (
     <>
@@ -89,6 +94,13 @@ const Dashboard = () => {
           <RequestCreditIncrease setDisplayModal={setDisplayModal} />
         </Modal>
       ) : null}
+      {showMakePaymentModal ? (
+        <Modal>
+          <MakePaymentModal closeModal={() => setShowMakePaymentModal(false)} />
+        </Modal>
+      ) : (
+        ""
+      )}
       <main>
         <section
           className={`container-md py-3 py-sm-5 ${styles.containerBody}`}
@@ -173,7 +185,10 @@ const Dashboard = () => {
                     <b> - </b>
                   </p>
                   <div className="d-lg-flex justify-content-between align-items-center">
-                    <span className={`${styles.requestLink} d-block`}>
+                    <span
+                      className={`${styles.requestLink} d-block`}
+                      onClick={() => setShowMakePaymentModal(true)}
+                    >
                       Make Payment
                     </span>
                     <span
