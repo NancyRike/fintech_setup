@@ -24,6 +24,7 @@ import {
   ActivateAccount,
   Dashboard,
   GetStarted,
+  Transactions,
 } from "./pages";
 
 // Layout routes
@@ -132,6 +133,16 @@ const AppRouter = () => {
           render={() => <ActivateAccount />}
         />
         <Route exact path="/get-started" render={() => <GetStarted />} />
+        <DashboardRoute
+          path={"/dashboard"}
+          exact={true}
+          Component={() => <Dashboard />}
+        />
+        <DashboardRoute
+          path={"/transactions"}
+          exact={true}
+          Component={() => <Transactions />}
+        />
         <Route exact path="/components" render={() => <Components />} />
         <Route path="*" render={() => <Redirect to="/dashboard" />} />
       </Switch>

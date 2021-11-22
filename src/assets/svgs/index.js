@@ -20,7 +20,12 @@ import { ReactComponent as TimeClock } from "./timeClock.svg";
 import { ReactComponent as Close } from "./close.svg";
 import { ReactComponent as Hamburger } from "./hamburger.svg";
 import { ReactComponent as Info } from "./info.svg";
-
+import { ReactComponent as SettingsIcon } from "./settings.svg";
+import { ReactComponent as ArrowLeft } from "./arrow-left-circle.svg";
+import { ReactComponent as ExportIcon } from "./External Link.svg";
+import { ReactComponent as SearchIcon } from "./search.svg";
+import { ReactComponent as FilterIcon } from "./filter.svg";
+import { ReactComponent as CancelIcon } from "./cancel.svg";
 export {
   Clock,
   UploadCloud,
@@ -44,4 +49,10 @@ export {
   Close,
   Hamburger,
   Info,
+  SettingsIcon,
+  ArrowLeft,
+  ExportIcon,
+  SearchIcon,
+  FilterIcon,
+  CancelIcon,
 };

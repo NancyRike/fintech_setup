@@ -11,7 +11,7 @@ import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 import { Line } from "react-chartjs-2";
 import { Button, Inputs, Modal } from "../../components";
-import { PaymentScheduleModal } from "./components";
+import { PaymentScheduleModal, RequestCreditIncrease } from "./components";
 
 const data = {
   labels: [
@@ -63,6 +63,15 @@ const option = {
 const Dashboard = () => {
   const [showPaymentScheduleModal, setShowPaymentScheduleModal] =
     useState(false);
+  const [displayModal, setDisplayModal] = useState({
+    details: "",
+    visibility: false,
+  });
+  const handleModal = () => {
+    setDisplayModal({
+      visibility: true,
+    });
+  };
 
   return (
     <>
@@ -75,6 +84,11 @@ const Dashboard = () => {
       ) : (
         ""
       )}
+      {displayModal.visibility ? (
+        <Modal>
+          <RequestCreditIncrease setDisplayModal={setDisplayModal} />
+        </Modal>
+      ) : null}
       <main>
         <section
           className={`container-md py-3 py-sm-5 ${styles.containerBody}`}
@@ -134,11 +148,15 @@ const Dashboard = () => {
                       <p>-</p>
                     </div>
                   </div>
-                  <div>
-                    <Link className={`${styles.requestLink}`}>
-                      Request Credit Increase
-                    </Link>
-                  </div>
+                </div>
+                <div>
+                  <Link
+                    to="#"
+                    className={`${styles.requestLink}`}
+                    onClick={handleModal}
+                  >
+                    Request Credit Increase
+                  </Link>
                 </div>
               </div>
             </div>
