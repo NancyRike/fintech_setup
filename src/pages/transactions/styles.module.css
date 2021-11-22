@@ -1,10 +1,12 @@
-.transactionHeader svg, .settingsButton svg, .exportTransaction svg{
+.transactionHeader svg,
+.settingsButton svg,
+.exportTransaction svg {
   width: 16px;
   height: 16px;
   cursor: pointer;
 }
-.transactionHeader span{
-  font-family: 'Source Sans Pro';
+.transactionHeader span {
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -13,109 +15,142 @@
   align-items: center;
   color: #091e42;
 }
-.settingsButton button{
+.settingsButton button {
   text-decoration: none !important;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 22px;
-text-decoration: none !important;
-color: #0447F1;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none !important;
+  color: #0447f1;
 }
-.transactionList a{
-  font-family: 'Source Sans Pro';
+.transactionList a {
+  font-family: "Source Sans Pro";
   text-decoration: none;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 20px;
-display: flex;
-align-items: center;
-color: #0447F1;
-border-bottom: 3px solid #0447F1;;
-display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #0447f1;
+  border-bottom: 3px solid #0447f1;
+  display: inline-block;
 }
-.exportTransaction{
-  margin-top: 6px ;
-  font-family: 'Source Sans Pro';
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 25px;
-color: #0447F1;
-
+.exportTransaction {
+  margin-top: 6px;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: #0447f1;
 }
 
-.exportTransaction a{
+.exportTransaction a {
   text-decoration: none;
   margin-right: 7px;
 }
-.graphContainer{
+.graphContainer {
   /* height: 20em; */
 }
-.graphCard > div{
+.graphCard > div {
   border-radius: 16px;
-  border: 1px solid #DDE8FE;
+  border: 1px solid #dde8fe;
   box-shadow: 0px 2.64128px 10.5651px rgba(219, 219, 219, 0.25);
-
 }
-.dateOptions h4{
-  font-family: 'Source Sans Pro';
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 30px;
-color: #0035A3;
-
+.dateOptions h4 {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #0035a3;
 }
-.dateOptions span{
-  font-family: 'Source Sans Pro';
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 20px;
-color: #2F3034;
-margin-left: 6px;
-margin-right: 6px;
-cursor: pointer;
+.dateOptions span {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #2f3034;
+  margin-left: 6px;
+  margin-right: 6px;
+  cursor: pointer;
 }
-.dateOptions span:active{
-  color: #0447F1;
+.dateOptions span:active {
+  color: #0447f1;
 }
-.dateOptions a{
+.dateOptions a {
   text-decoration: none;
 }
-.searchTransactions{
+.searchTransactions {
   border: none;
   padding: 5px;
   border-radius: 14px;
-  background: #F4F5F7;
-  border: 0.668571px solid #E5ECFB;
+  background: #f4f5f7;
+  border: 0.668571px solid #e5ecfb;
   box-sizing: border-box;
   border-radius: 66.8571px;
-  
 }
-.searchTransactions ::placeholder{
-  font-family: 'Open Sans';
-font-style: normal;
-font-weight: normal;
-font-size: 9.36px !important;
-line-height: 13px;
-color: #4E6FB6 !important;
-
+.searchTransactions ::placeholder {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9.36px !important;
+  line-height: 13px;
+  color: #4e6fb6 !important;
 }
-.searchTransactions :focus-visible{
+.searchTransactions :focus-visible {
   border: none;
 }
-.searchTransactions :focus ::placeholder{
-  color: #4E6FB6 !important;
+.searchTransactions :focus ::placeholder {
+  color: #4e6fb6 !important;
 }
-.tableRow{
+.tableRow {
   border-radius: 16px;
-  border-bottom: 2px solid #DDE8FE;
+  border-bottom: 2px solid #dde8fe;
   box-shadow: 0px 2.64128px 10.5651px rgba(219, 219, 219, 0.25) !important;
 }
-.tableContainer thead{
-  
+.tableContainer > thead {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4e6fb6;
+}
+.tableContainer > tbody {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+.whitetest svg {
+  color: #0035a3 !important;
+  /* background-color: #0447F1; */
+}
+.chartLabel h6 {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #00246f;
+  transform: matrix(1, -0.01, -0.01, 1, 0, 0);
+}
+.chartLabel p {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4e6fb6;
+  transform: matrix(1, -0.01, -0.01, 1, 0, 0);
+}
+.chartLabel > div {
+  margin-left: 5px;
+  margin-right: 5px;
 }

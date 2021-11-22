@@ -1,7 +1,7 @@
 import React from "react";
 import { Doughnut, Line } from "react-chartjs-2";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ExportIcon, SettingsIcon } from "../../assets";
+import { ArrowLeft, ExportIcon, GreenCircle, SettingsIcon } from "../../assets";
 import styles from "./styles.module.css";
 
 const Transactions = () => {
@@ -145,8 +145,29 @@ const Transactions = () => {
             <div className={`${styles.chartContainer} p-2 `}>
               <Line
                 data={LineData}
-                legend={pieLegend}
-                options={lineOption}
+                options={{
+                  // reponsive: true,
+                  maintainAspectRatio: false,
+                  title: {
+                    display: false,
+                    text: "Performace Report",
+                    fontSize: 14,
+                  },
+                  plugins: {
+                    datalabels: {
+                      display: false,
+                    },
+                    legend: {
+                      display: false,
+                      position: "top",
+                      labels: {
+                        fontFamily: "Manrope",
+                        fontWeight: "300",
+                        fontSize: 12,
+                      },
+                    },
+                  },
+                }}
                 height={250}
               />
             </div>
@@ -164,13 +185,69 @@ const Transactions = () => {
                 <Link to="#">see more</Link>
               </div>
             </div>
-            <div className={`${styles.chartContainer} p-2 `}>
-              <Doughnut
-                data={pieData}
-                legend={pieLegend}
-                options={pieOptions}
-                height={250}
-              />
+            <div className={`row`}>
+              <div className={`col-8`}>
+                <div className={`${styles.chartContainer} p-2 `}>
+                  <Doughnut
+                    data={pieData}
+                    options={{
+                      // reponsive: true,
+                      maintainAspectRatio: false,
+                      title: {
+                        display: false,
+                        text: "Performace Report",
+                        fontSize: 14,
+                      },
+                      plugins: {
+                        datalabels: {
+                          display: false,
+                        },
+                        legend: {
+                          display: false,
+                          position: "top",
+                          labels: {
+                            fontFamily: "Manrope",
+                            fontWeight: "300",
+                            fontSize: 12,
+                          },
+                        },
+                      },
+                    }}
+                    height={250}
+                  />
+                </div>
+              </div>
+              <div className={`col-4`}>
+                <div>
+                  <div className={`d-flex align-items-start ${styles.chartLabel} `}>
+                    <div>
+                      <GreenCircle />
+                    </div>
+                    <div>
+                      <h6>Travel</h6>
+                      <p>₦100,000</p>
+                    </div>
+                  </div>
+                  <div className={`d-flex align-items-start ${styles.chartLabel} `}>
+                    <div>
+                      <GreenCircle />
+                    </div>
+                    <div className={`ml-3`}>
+                      <h6>Travel</h6>
+                      <p>₦100,000</p>
+                    </div>
+                  </div>
+                  <div className={`d-flex align-items-start ${styles.chartLabel} `}>
+                    <div>
+                      <GreenCircle />
+                    </div>
+                    <div>
+                      <h6>Travel</h6>
+                      <p>₦100,000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -183,13 +260,18 @@ const Transactions = () => {
             </div>
           </div>
           <div className={`col-md-6`}>
-            <input type="text" className={`${styles.searchTransactions}`} placeholder="Search" />
+            <input
+              type="text"
+              className={`${styles.searchTransactions}`}
+              placeholder="Search"
+            />
           </div>
         </div>
-        <div>
-        <table className={`table tabe-responsive ${styles.tableContainer}`}>
+        <div className={`table-responsive`}>
+          <table className={`table ${styles.tableContainer}`}>
             <thead>
               <tr>
+                <th> </th>
                 <th> Date </th>
                 <th> Cardholder </th>
                 <th> Merchant </th>
@@ -201,46 +283,50 @@ const Transactions = () => {
               </tr>
             </thead>
             <tbody className={`bg-white`}>
-                  <tr className={`${styles.tableRow}`}>
-                    <td className="py-1">24th 0ctober, 2022</td>
-                    <td>Ada Exe</td>
-                    <td>Netflix</td>
-                    <td>300,000</td>
-                    <td>3469 </td>                  
-                    <td>Virtual </td>                  
-                    <td>Entertainment </td>             
-                    <td> </td>             
-                </tr>
-                  <tr className={`${styles.tableRow}`}>
-                    <td className="py-1">24th 0ctober, 2022</td>
-                    <td>Ada Exe</td>
-                    <td>Netflix</td>
-                    <td>300,000</td>
-                    <td>3469 </td>                  
-                    <td>Virtual </td>                  
-                    <td>Entertainment </td>             
-                    <td> </td>             
-                </tr>
-                  <tr className={`${styles.tableRow}`}> 
-                    <td className="py-1">24th 0ctober, 2022</td>
-                    <td>Ada Exe</td>
-                    <td>Netflix</td>
-                    <td>300,000</td>
-                    <td>3469 </td>                  
-                    <td>Virtual </td>                  
-                    <td>Entertainment </td>             
-                    <td> </td>             
-                </tr>
-                  <tr className={`${styles.tableRow}`}>
-                    <td className="py-1">24th 0ctober, 2022</td>
-                    <td>Ada Exe</td>
-                    <td>Netflix</td>
-                    <td>300,000</td>
-                    <td>3469 </td>                  
-                    <td>Virtual </td>                  
-                    <td>Entertainment </td>             
-                    <td> </td>             
-                </tr>
+              <tr className={`${styles.tableRow}`}>
+                <td></td>
+                <td>24th 0ctober, 2022</td>
+                <td>Ada Exe</td>
+                <td>Netflix</td>
+                <td>300,000</td>
+                <td>3469 </td>
+                <td>Virtual </td>
+                <td>Entertainment </td>
+                <td> </td>
+              </tr>
+              <tr className={`${styles.tableRow}`}>
+                <td></td>
+                <td className="py-1">24th 0ctober, 2022</td>
+                <td>Ada Exe</td>
+                <td>Netflix</td>
+                <td>300,000</td>
+                <td>3469 </td>
+                <td>Virtual </td>
+                <td>Entertainment </td>
+                <td> </td>
+              </tr>
+              <tr className={`${styles.tableRow}`}>
+                <td></td>
+                <td className="py-1">24th 0ctober, 2022</td>
+                <td>Ada Exe</td>
+                <td>Netflix</td>
+                <td>300,000</td>
+                <td>3469 </td>
+                <td>Virtual </td>
+                <td>Entertainment </td>
+                <td> </td>
+              </tr>
+              <tr className={`${styles.tableRow}`}>
+                <td></td>
+                <td className="py-1">24th 0ctober, 2022</td>
+                <td>Ada Exe</td>
+                <td>Netflix</td>
+                <td>300,000</td>
+                <td>3469 </td>
+                <td>Virtual </td>
+                <td>Entertainment </td>
+                <td> </td>
+              </tr>
             </tbody>
           </table>
         </div>
