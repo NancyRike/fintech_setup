@@ -1,10 +1,27 @@
 import React from "react";
 import { Doughnut, Line } from "react-chartjs-2";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ExportIcon, GreenCircle, SettingsIcon } from "../../assets";
+import {
+  ArrowLeft,
+  ExportIcon,
+  EyeIcon,
+  FIleIcon,
+  FilterIcon,
+  SearchIcon,
+  SettingsIcon,
+  TriangleIcon,
+  WriteIcon,
+} from "../../assets";
 import styles from "./styles.module.css";
 
 const Transactions = () => {
+
+  const pieChartLabel=[
+    {activity: "Travels", colour: 'rgba(86, 133, 255, 1)', price: "₦200,000"},
+    {activity: "Service and Bills", colour: 'rgba(26, 99, 255, 1)', price: "₦410,000"},
+    {activity: "Entertainment", colour: 'rgba(80, 30, 255, 1) ', price: "₦270,000"},
+    {activity: "Recurring Software", colour: 'rgba(255, 210, 0, 1)', price: "₦760,000"},
+  ]
   const pieData = {
     maintainAspectRatio: false,
     responsive: false,
@@ -26,31 +43,6 @@ const Transactions = () => {
       },
     ],
   };
-  const pieOptions = {
-    maintainAspectRatio: false,
-
-    cutoutPercentage: 30,
-    options: {
-      // legend:{
-      //   display: false,
-      // },
-      elements: {
-        center: {
-          text: "20% Travel",
-          color: "#00246F",
-        },
-      },
-    },
-  };
-  const pieLegend = {
-    display: false,
-    position: "bottom",
-    labels: {
-      fontColor: "#323130",
-      fontSize: 14,
-    },
-  };
-
   const LineData = {
     labels: [
       "Jan",
@@ -76,28 +68,7 @@ const Transactions = () => {
       },
     ],
   };
-  const lineOption = {
-    maintainAspectRatio: false,
-    scales: {
-      xAxes: [
-        {
-          gridLines: {
-            display: true,
-            color: "#2F3034",
-          },
-        },
-      ],
-      yAxes: [
-        {
-          display: false,
-          gridLines: {
-            display: false,
-            color: "#2F3034",
-          },
-        },
-      ],
-    },
-  };
+  
   return (
     <main className={`${styles.transactionContainer} p-4 container`}>
       <div className={`d-flex justify-content-between align-items-center`}>
@@ -146,13 +117,7 @@ const Transactions = () => {
               <Line
                 data={LineData}
                 options={{
-                  // reponsive: true,
                   maintainAspectRatio: false,
-                  title: {
-                    display: false,
-                    text: "Performace Report",
-                    fontSize: 14,
-                  },
                   plugins: {
                     datalabels: {
                       display: false,
@@ -160,11 +125,6 @@ const Transactions = () => {
                     legend: {
                       display: false,
                       position: "top",
-                      labels: {
-                        fontFamily: "Manrope",
-                        fontWeight: "300",
-                        fontSize: 12,
-                      },
                     },
                   },
                 }}
@@ -176,7 +136,7 @@ const Transactions = () => {
         <div className={`col-md-6 ${styles.graphCard}`}>
           <div className={`bg-white p-3 h-100`}>
             <div
-              className={`d-flex ${styles.dateOptions} justify-content-between align-items-center`}
+              className={`d-flex ${styles.dateOptions} mb-4 justify-content-between align-items-center`}
             >
               <div>
                 <h4>Spent By Category</h4>
@@ -191,13 +151,7 @@ const Transactions = () => {
                   <Doughnut
                     data={pieData}
                     options={{
-                      // reponsive: true,
                       maintainAspectRatio: false,
-                      title: {
-                        display: false,
-                        text: "Performace Report",
-                        fontSize: 14,
-                      },
                       plugins: {
                         datalabels: {
                           display: false,
@@ -205,11 +159,6 @@ const Transactions = () => {
                         legend: {
                           display: false,
                           position: "top",
-                          labels: {
-                            fontFamily: "Manrope",
-                            fontWeight: "300",
-                            fontSize: 12,
-                          },
                         },
                       },
                     }}
@@ -219,33 +168,22 @@ const Transactions = () => {
               </div>
               <div className={`col-4`}>
                 <div>
-                  <div className={`d-flex align-items-start ${styles.chartLabel} `}>
-                    <div>
-                      <GreenCircle />
+                  {pieChartLabel.map((chartDetails, index)=>{
+                    return(
+                       <div
+                    className={`d-flex align-items-start  ${styles.chartLabel} `}
+                  >
+                    <div className={`${styles.labelColour}`} style={{backgroundColor: chartDetails.colour}}>
+                      {}
                     </div>
                     <div>
-                      <h6>Travel</h6>
-                      <p>₦100,000</p>
+                      <h6>{chartDetails.activity}</h6>
+                      <p>{chartDetails.price}</p>
                     </div>
-                  </div>
-                  <div className={`d-flex align-items-start ${styles.chartLabel} `}>
-                    <div>
-                      <GreenCircle />
-                    </div>
-                    <div className={`ml-3`}>
-                      <h6>Travel</h6>
-                      <p>₦100,000</p>
-                    </div>
-                  </div>
-                  <div className={`d-flex align-items-start ${styles.chartLabel} `}>
-                    <div>
-                      <GreenCircle />
-                    </div>
-                    <div>
-                      <h6>Travel</h6>
-                      <p>₦100,000</p>
-                    </div>
-                  </div>
+                  </div> 
+                    )
+                  })
+                  }                
                 </div>
               </div>
             </div>
@@ -254,17 +192,20 @@ const Transactions = () => {
       </div>
       <section className={`bg-white p-4 mt-4`}>
         <div className={`row justify-content-between align-items-center`}>
-          <div className={`col-md-6`}>
+          <div className={` col-md-6 `}>
             <div>
               <h2>Transaction History</h2>
             </div>
           </div>
-          <div className={`col-md-6`}>
-            <input
-              type="text"
-              className={`${styles.searchTransactions}`}
-              placeholder="Search"
-            />
+          <div className={` col-md-6 d-flex flex-nowrap justify-content-md-end`}>
+            <span className={`${styles.searchTransactions}`}>
+              <SearchIcon />
+              <input type="text" placeholder="Search" />
+            </span>
+            <span className={`${styles.filterTransactions} `}>
+              <FilterIcon />
+              <input type="text" placeholder="Filter" />
+            </span>
           </div>
         </div>
         <div className={`table-responsive`}>
@@ -284,7 +225,9 @@ const Transactions = () => {
             </thead>
             <tbody className={`bg-white`}>
               <tr className={`${styles.tableRow}`}>
-                <td></td>
+                <td>
+                  <TriangleIcon />
+                </td>
                 <td>24th 0ctober, 2022</td>
                 <td>Ada Exe</td>
                 <td>Netflix</td>
@@ -292,7 +235,26 @@ const Transactions = () => {
                 <td>3469 </td>
                 <td>Virtual </td>
                 <td>Entertainment </td>
-                <td> </td>
+                <td className={`${styles.editIcons}`}>
+                  <WriteIcon />
+                  <FIleIcon />
+                </td>
+              </tr>
+              <tr className={`${styles.tableRow}`}>
+                <td>
+                  <EyeIcon />
+                </td>
+                <td className="py-1">24th 0ctober, 2022</td>
+                <td>Ada Exe</td>
+                <td>Netflix</td>
+                <td>300,000</td>
+                <td>3469 </td>
+                <td>Virtual </td>
+                <td>Entertainment </td>
+                <td className={`${styles.editIcons}`}>
+                  <WriteIcon />
+                  <FIleIcon />
+                </td>
               </tr>
               <tr className={`${styles.tableRow}`}>
                 <td></td>
@@ -303,7 +265,10 @@ const Transactions = () => {
                 <td>3469 </td>
                 <td>Virtual </td>
                 <td>Entertainment </td>
-                <td> </td>
+                <td className={`${styles.editIcons}`}>
+                  <WriteIcon />
+                  <FIleIcon />
+                </td>
               </tr>
               <tr className={`${styles.tableRow}`}>
                 <td></td>
@@ -314,18 +279,10 @@ const Transactions = () => {
                 <td>3469 </td>
                 <td>Virtual </td>
                 <td>Entertainment </td>
-                <td> </td>
-              </tr>
-              <tr className={`${styles.tableRow}`}>
-                <td></td>
-                <td className="py-1">24th 0ctober, 2022</td>
-                <td>Ada Exe</td>
-                <td>Netflix</td>
-                <td>300,000</td>
-                <td>3469 </td>
-                <td>Virtual </td>
-                <td>Entertainment </td>
-                <td> </td>
+                <td className={`${styles.editIcons}`}>
+                  <WriteIcon />
+                  <FIleIcon />
+                </td>
               </tr>
             </tbody>
           </table>
