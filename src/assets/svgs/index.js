@@ -26,12 +26,19 @@ import { ReactComponent as ExportIcon } from "./External Link.svg";
 import { ReactComponent as SearchIcon } from "./search.svg";
 import { ReactComponent as FilterIcon } from "./filter.svg";
 import { ReactComponent as CancelIcon } from "./cancel.svg";
+import { ReactComponent as TickIcon } from "./Checkmark.svg";
+import { ReactComponent as EyeIcon } from "./Eye.svg";
+import { ReactComponent as FIleIcon } from "./file-text.svg";
+import { ReactComponent as TriangleIcon } from "./Triangle.svg";
+import { ReactComponent as WriteIcon } from "./edit-3.svg";
+
 export {
   Clock,
   UploadCloud,
   WarningIcon,
   ToggleOn,
   ArrowDown,
+  WriteIcon,
   ToggleOff,
   EyeClose,
   EyeOpen,
@@ -43,11 +50,14 @@ export {
   ArrowRight,
   PowerIcon,
   HomeIcon,
+  TickIcon,
   CardIcon,
   WelcomeImage,
   TimeClock,
   Close,
   Hamburger,
+  FIleIcon,
+  TriangleIcon,
   Info,
   SettingsIcon,
   ArrowLeft,
@@ -55,4 +65,5 @@ export {
   SearchIcon,
   FilterIcon,
   CancelIcon,
+  EyeIcon,
 };

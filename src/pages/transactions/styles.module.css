@@ -52,13 +52,17 @@
   text-decoration: none;
   margin-right: 7px;
 }
-.graphContainer {
-  /* height: 20em; */
-}
+
 .graphCard > div {
   border-radius: 16px;
   border: 1px solid #dde8fe;
   box-shadow: 0px 2.64128px 10.5651px rgba(219, 219, 219, 0.25);
+}
+.labelColour{
+  border-radius: 6px;
+  width: 8px;
+  height: 8px;
+  transform: matrix(1, -0.01, -0.01, 1, 0, 0);
 }
 .dateOptions h4 {
   font-family: "Source Sans Pro";
@@ -86,13 +90,17 @@
   text-decoration: none;
 }
 .searchTransactions {
-  border: none;
   padding: 5px;
   border-radius: 14px;
   background: #f4f5f7;
   border: 0.668571px solid #e5ecfb;
   box-sizing: border-box;
   border-radius: 66.8571px;
+}
+.searchTransactions input{
+    border: none;
+    background: #f4f5f7;
+
 }
 .searchTransactions ::placeholder {
   font-family: "Open Sans";
@@ -101,11 +109,44 @@
   font-size: 9.36px !important;
   line-height: 13px;
   color: #4e6fb6 !important;
+  margin-right: 8px;
 }
-.searchTransactions :focus-visible {
+.searchTransactions > input :focus-visible {
   border: none;
 }
 .searchTransactions :focus ::placeholder {
+  color: #4e6fb6 !important;
+}
+.filterTransactions {
+  padding: 5px;
+  border-radius: 14px;
+  background: #f4f5f7;
+  border: 0.668571px solid #e5ecfb;
+  box-sizing: border-box;
+  border-radius: 66.8571px;
+  margin-left: 8px;
+}
+.filterTransactions input{
+    border: none;
+    background: #f4f5f7;
+    width: 50px;
+}
+.filterTransactions ::placeholder {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9.36px !important;
+  line-height: 13px;
+  color: #4e6fb6 !important;
+}
+.filterTransactions > input :focus {
+  border: none;
+  outline: none;
+}
+textarea:focus, input:focus{
+  outline: none;
+}
+.filterTransactions :focus ::placeholder {
   color: #4e6fb6 !important;
 }
 .tableRow {
@@ -158,4 +199,9 @@
 .transactionContainer td {
   padding: 25px 0px !important;
   font-weight: 700 !important;
+}
+.editIcons > svg{
+  width: 24px;
+  height: 24px;
+  margin: 8px;
 }
