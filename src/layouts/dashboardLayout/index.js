@@ -37,15 +37,15 @@ const DashboardLayout = ({ children }) => {
                 <ul className={`${styles.sideBarList}`}>
                   <li>
                     <PowerIcon />
-                    <Link> Get Started</Link>
+                    <Link to="#"> Get Started</Link>
                   </li>
                   <li>
                     <HomeIcon />
-                    <Link> Dashboard</Link>
+                    <Link to="/dashboard"> Dashboard</Link>
                   </li>
                   <li>
                     <CardIcon />
-                    <Link>
+                    <Link to="#">
                       Cards <ArrowDown className="ml-3" />
                     </Link>
                   </li>
